@@ -1,0 +1,84 @@
+/* 
+    Document   : module_page
+    Created on : Jun 16, 2013, 4:25:01 PM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.top_header{
+    background-color: #004673;
+    background-image: none;
+    border: none;
+}
+a.brand{
+    text-shadow: none !important;
+    margin-left: 196px !important;
+    color: #fff !important;
+}
+a.username{
+    text-shadow: none !important;
+    float: right !important;
+    color: #fff !important;
+}
+b.caret{
+    border-top-color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+a.dropdown-toggle.username{
+    background-color: #004673 !important;
+    font-size: 12px;
+}
+body{
+    /*background-image: url('../img/noise.jpg');*/
+}
+#background{
+    width: 100%;
+    background-color: #fff;
+    clear: both;
+    margin-top: 10px;
+}
+#main_bg {
+    background-color: #fff;
+    width: 1100px;
+    margin: 0px auto;
+}
+#top_header{
+    margin-bottom: 0px;
+}
+
+/*.mod_icon_bg{
+    background-color: red;
+    margin-top: 30px;
+    
+}
+div#dashboard_bg.container .mod_icon_bg{
+    margin-left: 67px;
+    height: 150px;
+}
+.footer{
+    clear: both;
+    margin-bottom: 20px;
+    margin-top: 83px;
+    margin-left: 60px;
+}
+.img_place{
+    background-color: green;
+    height: 110px;
+}
+.icon_name{
+    background-color: blue;
+    height: 40px;
+    text-align: center;
+    
+}
+.icon_name p{
+    padding-top: 10px;
+}
+.img_place img{
+    height: 109px;
+    margin-left: 58px;*/
+/*}*/

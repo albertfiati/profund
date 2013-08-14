@@ -1,0 +1,100 @@
+/* 
+    Document   : login_page
+    Created on : Jun 16, 2013, 10:06:06 AM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body {
+    color: #000;
+    font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+    font-size: 13px;
+}
+.login{
+    /*background: rgba(48, 97, 136, 0.8);*/
+    background: white;
+} 
+.logo{
+    width: 330px;
+}
+.login .logo {
+    width: 247px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+}
+.login .content {
+    background-color: #fff;
+    width: 291px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border: 1px solid grey;
+}
+.login .content .form-title {
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+.login .content h3 {
+    color: #000;
+    font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+}
+.login .content .input-icon {
+    border-left: 2px solid #35aa47;
+}
+.login .content .control-group {
+    margin-bottom: 20px !important;
+}
+.input-icon.left i {
+    color: #ccc;
+    display: block !important;
+    position: absolute !important;
+    z-index: 1;
+    margin: 9px 2px 4px 10px;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+.icon-user:before {
+    content: "f007";
+}
+.login .content .input-icon .m-wrap {
+    margin: 0px !important;
+}
+.login .content .m-wrap {
+    width: 249px;
+    border-left: 0 !important;
+}
+.input-icon.left input {
+    padding-left: 33px !important;
+}
+button#login-btn.btn.blue.pull-right{
+    background: rgba(48, 97, 136, 0.8);
+}
+.login .content .form-actions {
+    background-color: #fff;
+    clear: both;
+    border: 0px;
+    border-bottom: 1px solid #eee;
+    padding: 0px 30px 25px 30px;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.copyright{
+    color: rgb(209, 245, 247);
+}
+.login .copyright {
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px 10px 0 10px;
+    font-size: 11px;
+}
