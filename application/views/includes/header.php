@@ -49,7 +49,7 @@ and open the template in the editor.
                             <li class="dropdown">  
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transactions <b class="caret"></b></a>  
                                 <ul class="dropdown-menu">  
-                                    <li><a href="<?php echo base_url();?>index.php/payment_certificate/create">Payment  certificate</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/payment_certificate">Payment  certificate</a></li>
                                 </ul>  
                             </li>  
                         </ul>

@@ -3,9 +3,9 @@
         <div class="row-fluid bg">
             <div class="span12 main_content_bg">
                 <div class="row dashboard">
-<!--                    <div class="span4 user_summary">
+                    <div class="span4 user_summary">
                         
-                    </div>-->
+                    </div>
                     <div class="span8" id="user_menu" style="margin-left: 200px;">
 
                         <div id="program_status">
@@ -26,7 +26,7 @@
                                         Fields marked with the <span>*</span> symbol are required
                                     </td>
                                 </tr>
-<!--                                <tr>
+                                <tr>
                                     <td>
                                         <b>Sub-component code</b>
                                         <span> *</span>
@@ -34,7 +34,7 @@
                                     <td>
                                         <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             </td>
 
-                                    </tr>-->
+                                    </tr>
                                 
                                 <tr>
                                 
@@ -189,7 +189,7 @@
 
                                 </tr>
                                 
-<!--                                <tr>
+                                <tr>
                          
                                     <td>
                                         <b>Reference to Works Completed (as defined in the contract)</b>
@@ -199,7 +199,7 @@
                                         <input type='text' name='agency' placeholder="">
                                     </td>
 
-                                </tr>-->
+                                </tr>
                                 
                                 <tr>
                          
@@ -388,7 +388,7 @@
     </div>
 </div>
 
-<!--<div class='row-fluid'>
+<div class='row-fluid'>
     <div class='span12'>
 <?php echo form_open('programs/create', array('class' => 'form-horizontal')); ?>
         <div class='row-fluid'>
@@ -483,4 +483,4 @@
         </div>
 <?php echo form_close(); ?>
     </div>
-</div>-->
+</div>
