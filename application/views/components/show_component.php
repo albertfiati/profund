@@ -40,42 +40,13 @@
                     if ($component_funds != null){ 
                 ?>
 
-                <ul class="nav nav-tabs" id="myTab">
-                    <li class="active"><a href="#compfunds">Component Funds</a></li>
-                    <li><a href="#subcomp">Program Sub-components</a></li>                
+                <ul class="nav nav-tabs" id="myTab">                    
+                    <li class="active"><a href="#subcomp">Program Sub-components</a></li>   
+                    <li><a href="#compfunds">Component Funds</a></li>             
                 </ul>
 
-                <div class="tab-content">
-                    <div class="tab-pane active" id="compfunds">
-                        <table class='table table-bordered table-striped' id="programme_table3">
-                            <thead>
-                                <tr>
-                                    <th>Donor</th>
-                                    <th class="align-center span2">Year(years)</th>
-                                    <th class="align-center span2">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($component_funds as $component_f): ?>
-                                    <tr>
-                                        <td><?php echo $component_f['fund_donor']; ?></td>
-                                        <td><?php echo $component_f['fund_years']; ?></td>
-                                        <td class="amount"><?php echo $component_f['fund_amount'] ?></td>                
-                                    </tr>
-                                <?php endforeach ?> 
-                            </tbody>
-                        </table>
-                        <?php } ?>
-
-                        <div>
-                            <ul class="nav nav-pills">
-                                <li class="active pull-right">
-                                    <a href="<?php echo base_url();?>index.php/funds/allocate/<?php echo 'new';  ?>" style="margin-left: 40px;">Allocate fund</a> 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="subcomp">
+                <div class="tab-content">                    
+                    <div class="tab-pane  active" id="subcomp">
                         <table class='table table-bordered table-striped' id="programme_table3">
                             <thead>
                                 <tr>
@@ -113,6 +84,35 @@
                                     <a href="<?php echo base_url();?>index.php/sub_components/create/<?php echo 'new';  ?>" style="margin-left: 40px;">
                                         Create a new sub-component
                                     </a> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="compfunds">
+                        <table class='table table-bordered table-striped' id="programme_table3">
+                            <thead>
+                                <tr>
+                                    <th>Donor</th>
+                                    <th class="align-center span2">Year(years)</th>
+                                    <th class="align-center span2">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($component_funds as $component_f): ?>
+                                    <tr>
+                                        <td><?php echo $component_f['fund_donor']; ?></td>
+                                        <td><?php echo $component_f['fund_years']; ?></td>
+                                        <td class="amount"><?php echo $component_f['fund_amount'] ?></td>                
+                                    </tr>
+                                <?php endforeach ?> 
+                            </tbody>
+                        </table>
+                        <?php } ?>
+
+                        <div>
+                            <ul class="nav nav-pills">
+                                <li class="active pull-right">
+                                    <a href="<?php echo base_url();?>index.php/funds/allocate/<?php echo 'new';  ?>" style="margin-left: 40px;">Allocate fund</a> 
                                 </li>
                             </ul>
                         </div>

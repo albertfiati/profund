@@ -22,6 +22,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-styles.min.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/css/form_new.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/css/jquery-ui-1.10.3.custom.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/css/progress.css') ?>" type="text/css"/>
         <style type="text/css" title="currentStyle">
             /*@import "../public/media/css/demo_page.css";*/
             @import "../public/media/css/demo_table.css";
@@ -30,12 +31,12 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <div class="header-top container">
+            <!-- <div class="header-top container">
                 <a href="home"><img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund"></a>
                 <div class="clearer"></div>
-            </div>
+            </div> -->
             
-            <div class="navbar">  
+            <div class="navbar navbar-fixed">  
                 <div class="navbar-inner" style="border-radius: 0px !important;">                       
                     <div class="nav-container">
                         <ul class="nav">  
