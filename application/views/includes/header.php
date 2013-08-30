@@ -23,6 +23,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="<?php echo base_url('public/css/form_new.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/css/jquery-ui-1.10.3.custom.min.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/css/progress.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/font-awesome.min.css') ?>" type="text/css"/>
         <style type="text/css" title="currentStyle">
             /*@import "../public/media/css/demo_page.css";*/
             @import "../public/media/css/demo_table.css";

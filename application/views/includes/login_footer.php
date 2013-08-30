@@ -10,12 +10,5 @@ and open the template in the editor.
 <script src="<?php // echo base_url('public/js/languages/jquery.validationEngine-en.js') ?>" type="text/javascript" charset="utf-8"></script>
 <script src="<?php // echo base_url('public/js/jquery.validationEngine.js') ?>" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo base_url('public/js/header.js') ?>" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/font-awesome.min.css') ?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-buttons.min.css') ?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-forms.min.css') ?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-icons.min.css') ?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-normalize.min.css') ?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-styles.min.css') ?>" type="text/css"/>
-<link rel="stylesheet" href="<?php echo base_url('public/css/form.css') ?>" type="text/css"/>
 </body>
 </html>

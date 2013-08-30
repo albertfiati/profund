@@ -12,6 +12,13 @@ and open the template in the editor.
         <link href="<?php echo base_url('public/css/login_page.css'); ?>" rel="stylesheet" type="text/css"/>
         <link href="<?php // echo base_url('public/css/password_reset.css'); ?>" rel="stylesheet" type="text/css"/>
     	<link href="<?php echo base_url('public/css/new_header.css'); ?>" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/font-awesome.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-buttons.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-forms.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-icons.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-normalize.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-styles.min.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/css/form.css') ?>" type="text/css"/>
     </head>
     <body class="login">
         
