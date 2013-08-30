@@ -152,12 +152,92 @@
                                 
                             </td>
                             <td>
-                                <button class="btn btn-success" id="submit_create_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
+                                <!-- <button class="btn btn-success" id="submit_create_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button> -->
+                                <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success span2" data-toggle="modal" onclick="">Next <i class="icon-arrow-right icon-white"></i></a>
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Confirm Information Provided</h3>
+              </div>
+              <div class="modal-body">
+                    <table id="req_form">
+                        <tbody>                            
+                            <tr>
+                                <td>
+                                    <b>Title of Program</b>
+                                </td>
+                                <td>
+                                   <span id="program-title"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Program Code</b>
+                                </td>
+                                <td>
+                                    <span id="program-code"></span>
+                                </td>
+
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <b>Commencement Date</b>
+                                </td>
+                                <td>
+                                    <span id="start-date"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>End Date</b>
+                                </td>
+                                <td>
+                                    <span id="end-"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Currency</b>
+                                </td>
+                                <td>
+                                   <span id="currency"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Program Amount</b>
+                                </td>
+                                <td>
+                                    <span id="amount"></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Objective of Program</b>
+                                </td>
+                                <td>
+                                    <span id="objective"></span>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+              </div>
+              <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-primary">Submit</button>
+              </div>
             </div>
             </form>
         </div>

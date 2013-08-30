@@ -414,11 +414,25 @@
                                 </td>
                                 <td>
                                     <button class="btn btn-success" id="submit_button">Create Payment Certificate&nbsp;<i class="icon-arrow-right icon-white"></i></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Confirm Information Provided</h3>
+                        </div>
+                        <div class="modal-body">
+                                
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
             </form>
         </div>
     </div>

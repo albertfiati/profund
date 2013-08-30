@@ -12,7 +12,8 @@ and open the template in the editor.
 <script src="<?php echo base_url('public/js/header.js') ?>" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo base_url('public/js/jquery-ui-1.10.3.custom.min.js') ?>" type="text/javascript" charset="utf-8"></script>
 <script src="<?php echo base_url('public/js/form.js') ?>" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo base_url('public/media/js/jquery.dataTables.min.js') ?>" type="text/javascript" charset="utf-8"></script>
+<script src="<?php //echo base_url('public/media/js/jquery.dataTables.min.js') ?>" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url('public/js/modal-data.js') ?>" type="text/javascript" charset="utf-8"></script>
 <script>
 	$(document).ready(function(){
 		$('#myTab a').click(function (e) {
@@ -20,6 +21,8 @@ and open the template in the editor.
 			  $(this).tab('show');
 		})
 		$(".use-tooltip").tooltip();
+
+		$('#myModal').modal({show:false});
 	});
 </script>
 </body>
