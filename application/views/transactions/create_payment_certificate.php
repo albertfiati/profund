@@ -1,15 +1,92 @@
 <div class="container">
     <div class="row dashboard">
-        <div class="span3 user_summary">
-            
+        
+
+        <div class="span3 thumbnail user_summary">
+            <table>
+                 <tbody>
+                    <tr>
+                        <td>
+                            <span>User Name</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $username; ?> <hr/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Program Title</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->session->userdata['program_title']; ?><hr/></td>
+                    </tr>
+                 
+                    
+                    <tr>
+                        <td>
+                            <span>Component Title</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->session->userdata['component_title']; ?><hr/></td>
+                    </tr>
+                    <tr>
+                        <td><span>Component Code</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <?php echo $this->session->userdata['component_code']; ?><hr/>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><span>Sub-component Code</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <?php echo $this->session->userdata['sub_component_code']; ?><hr/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span>Contract Title</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <?php echo $this->session->userdata['contract_title']; ?><hr/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span>Activity type</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <?php echo $this->session->userdata['activity_type']; ?><hr/>
+                        </td>
+                    </tr>
+
+                     <tr>
+                        <td><span>Contractor Code</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <?php echo $this->session->userdata['contractor_code']; ?>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
+
         <div class="span8 pull-right" id="user_menu" style="margin-left: 200px;">
 
-            <div id="program_status">
-                <ul class="nav nav-pills">
-                    <li class="active">
-                        <a href="">Payment certificate for civil works</a>
-                    </li>
+           <div class="steps">
+                <ul id="progressbar">
+                    <li>Validate contract code</li>
+                    <li class="active">Fill in Payment Certificate details</li>
+               
                 </ul>
             </div>
 
@@ -22,17 +99,7 @@
                                     Fields marked with the <span>*</span> symbol are required
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <b>Sub-component code</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             </td>
-
-                                </tr>
-                            
-                            <tr>
+                
                             
                             
                                 <td>
@@ -72,7 +139,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='asset_account' placeholder="">
+                                    <input type='text' name='asset_account' placeholder="160001">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -94,48 +161,7 @@
                                     </div>
                                 </td>
                             </tr>                            
-                            <tr>
-                                <td>
-                                    <b>Contract number</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='contract_number' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("contract_number")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>
-                                <td>
-                                    <b>Contractor</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='contractor' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("contractor")); ?>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>                     
-                                <td>
-                                    <b>Agency</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='agency' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("agency")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
+                                 
                             <tr>
                                 <td>
                                     <b>Location</b>
@@ -143,7 +169,7 @@
                                 </td>
                                 <td>
                                     <select name='location'>
-                                        <option value=''>--Select stage--</option>
+                                        <option value=''>--Select location--</option>
                                         <option value='greater_accra'>Greater Accra</option>
                                         <option value='ashanti'>Ashanti</option>
                                         <option value='central'>Central</option>
@@ -204,20 +230,7 @@
                                     </div>
                                 </td>
                             </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Reference to Works Completed (as defined in the contract)</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='reference_to_works_conpleted' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("reference_to_works_conpleted")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
+                                                     
                             <tr>                     
                                 <td>
                                     <b>Gross value of work done (In Txn CCY)</b>
@@ -352,34 +365,23 @@
                                     </div>
                                 </td>
                             </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Amount payable by donors</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='amount_payable_to_donors' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("amount_payable_to_donors")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Amount payable by local sources</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='amount_payable_to_local_sources' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("amount_payable_to_local_sources")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
+                            
+                            <b>Net amount payable</b>
+                            <?php foreach ($funders as $funders_comp): ?>
+                                    <tr>
+                                        <td><b><?php echo $funders_comp['fund_donor']; ?></b></td>
+                                         <td>
+                                        <input type='text' name='amount_payable_to_donors' placeholder="">
+                                        </td>
+                                        <td class="span3" >
+                                            <div class="error-msg">
+                                                <?php print(form_error("amount_payable_to_donors")); ?>
+                                            </div>
+                                        </td>   
+                                      
+                                    </tr>
+                            <?php endforeach ?>
+
                             <tr>                     
                                 <td>
                                     <b>Make payment directly to: </b>
@@ -400,7 +402,12 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='payment_method' placeholder="">
+                                    <select name='payment_method'>
+                                        <option value=''>--Select Payment Method--</option>
+                                        <option value='greater_accra'>Cash</option>
+                                        <option value='ashanti'>Cheque</option>
+        
+                                    </select>
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">

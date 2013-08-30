@@ -89,9 +89,11 @@ $route['view_program'] = 'programs/view';
 $route['program_success'] = 'programs/programs_success';
 $route['programs'] = 'programs';
 
-$route['create_payment_certificate'] = 'payment_certificate/contract';
+$route['create_payment_certificate'] = 'payment_certificate/create_payment_certificate';
 $route['new_transaction']            = 'payment_certificate/new_transaction';
+$route['validate_contract_code']       = 'payment_certificate/validate_contract_code';
 $route['validate_contract']       = 'payment_certificate/validate_contract';
+$route['create_funders']          = 'payment_certificate/create_funders';
 
 $route['logout'] = 'home/logout';
 

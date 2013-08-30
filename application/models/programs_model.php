@@ -24,11 +24,6 @@ public function get_single_program($program_code)
 
 public function get_program($idp) 
     {
-//        if ($idp === FALSE)
-//        {
-//            $query = $this->db->get('programs');
-//            return $query->result_array();
-//        }
 
         $query = $this->db->get_where('programs', array('program_code' => $idp));
         return $query->row_array();

@@ -8,7 +8,12 @@ class Sub_components_model extends CI_Model {
 	}
         
         
+public function get_sub_component($sub_component_code)
+{
+    $query = $this->db->get_where('sub_components', array('sub_component_code' => $sub_component_code));
+        return $query->row_array();
 
+}
 
 public function get_sub_components($component_code)
 {

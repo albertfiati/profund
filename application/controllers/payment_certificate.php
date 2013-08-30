@@ -2,108 +2,115 @@
 class Payment_certificate extends CI_Controller {
 
 	public function __construct()
-	{
-		parent::__construct();
-		$this->load->model('contracts_model');
-                $this->load->library('session');
-	}
+    {
+        parent::__construct();
+        $this->load->model('payment_certificate_model');
+        $this->load->model('contracts_model');
+        $this->load->model('sub_components_model');
+        $this->load->model('components_model');
+        $this->load->model('programs_model');
+        $this->load->library('session');
+    }
+
 
 	public function index() {
-            $this->contract();
+             if ($this->session->userdata('logged_in')) {
+            $session_data = $this->session->userdata('logged_in');
+
+            $data['username'] = $session_data['username'];
+            $data['title'] = 'Payment_certificate';
+
+            $this->validate_contract_code();
+
+        } else {
+            //If no session, redirect to login page
+            redirect('login', 'refresh');
+        }
         }
 
-//	public function view($slug)
-//{
-//	$data['news_item'] = $this->news_model->get_news($slug);
-//
-//	if (empty($data['news_item']))
-//	{
-//		show_404();
-//	}
-//
-//	$data['title'] = $data['news_item']['title'];
-//
-//	$this->load->view('templates/header', $data);
-//	$this->load->view('news/view', $data);
-//	$this->load->view('templates/footer');
-//}
-//
+    public function validate_contract_code() {
 
-    public function show() {
+        if($this->session->userdata('logged_in'))
+      {
+ 
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 
-//        $contract_code = $this->session->userdata('contract_code');
-        $contract_code = 'SC00001';
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            
+            $data['title'] = 'Valideate contract code';
+            
 
-        $contract_details = $this->contracts_model->get_contract($contract_code);
-        $data['contract_details'] = $contract_details;
-        $type = $contract_details['activity_type'];
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/get_contract');
+            $this->load->view('includes/footer');
 
-
-        $contract_type_details = $this->contracts_model->get_contract_type_details($type, $contract_code);
-
-        $data['contract_type_details'] = $contract_type_details;
-        $data['type'] = $type;
-
-
-
-//        $this->load->helper('url');
-//	if (empty($data['programs']))
-//	{
-//		show_404();
-//	}
-
-        $data['title'] = 'Show contract';
-
-        $this->load->view('includes/header', $data);
-
-        if ($type == 'works') {
-            $this->load->view('contracts/show_contract', $data);
-        } else if ($type == 'goods') {
-            $this->load->view('goods/show_goods', $data);
-        } else if ($type == 'consultancy') {
-            $this->load->view('consultancy/show_consultancy', $data);
-        } else if ($type == 'operating_expenses') {
-            $this->load->view('operating_expenses/show_operating_expenses', $data);
-        } else if ($type == 'training') {
-            $this->load->view('training/show_training', $data);
+     } else {
+            //If no session, redirect to login page
+            redirect('login', 'refresh');
         }
-
-
-        $this->load->view('includes/footer');
     }
 
-    public function contract() {
-        $this->load->helper('form');
-        $this->load->view('transactions/get_contract');
-    }
+
 
     public function validate_contract() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
+
         $contract_code = $_REQUEST[ 'contract_code' ];
         $contract      = $this->contracts_model->get_contract( $contract_code );
-        
+
+        $this->session->set_userdata('component_title', '');
+        $this->session->set_userdata('program_title', '');
+
+        $sub_component_code = $contract['sub_component_code'];
+
+        $sub_component = $this->sub_components_model->get_sub_component($sub_component_code);
+        $component_code = $sub_component['component_code'];
+
+        $component = $this->components_model->get_component($component_code);
+        $program_code = $component['program_code'];
+
+        $program = $this->programs_model->get_program($program_code);
+
+        $this->session->set_userdata('sub_component_code', $sub_component_code);
+        $this->session->set_userdata('component_code', $component_code);
+        $this->session->set_userdata('activity_type', $contract['activity_type']);
+
+        $this->session->set_userdata('component_title', $component['component_title']);
+        $this->session->set_userdata('component_title', $component['component_title']);
+        $this->session->set_userdata('program_title', $program['program_title']);
+
+        $this->session->set_userdata('contract_title', $contract['contract_title']);
+        $this->session->set_userdata('contractor_code', $contract['contractor_code']);
+
         if ( count( $contract ) > 0 ) {
             // yup, found some contract
-            $this->new_transaction( $contract );
+            redirect('new_transaction');
         } else {
-            $this->load->helper( 'form' );
-            $this->load->view( 'transactions/get_contract' );
+            $this->validate_contract_code();
         }
     }
 
-    public function new_transaction( $contract ) {
+    public function new_transaction() {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
-        $data['contract'] = $contract;
 //        $data['success_message'] = $session_data['success_message'];
 
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['title'] = 'Create payment transaction for ' . $contract[ 'contract_code' ];
+        $data['title'] = 'Create payment transaction';
         $this->form_validation->set_error_delimiters('<div style="width:470px; margin:20px;" class="alert alert-error">', '</div>');
+
+        $data['username'] = $session_data['username'];
+        $component_code = $this->session->userdata('component_code');
+
+
+
+        $funders = $this->components_model->get_funders($component_code);
+        $data['funders'] = $funders;
 
 
         if ($this->form_validation->run() === FALSE) {
@@ -120,7 +127,36 @@ class Payment_certificate extends CI_Controller {
         }
     }
 
-    public function create() {
-        echo 'something';
+    public function create_payment_certificate(){
+
+      if($this->session->userdata('logged_in'))
+      {
+ 
+        $session_data = $this->session->userdata('logged_in');
+        $data = $this->payment_certificate_model->set_payment_certificate();
+
+        $agency = '';
+
+        $data['username'] = $session_data['username'];
+        $data['title'] = 'payment_certificate';
+
+       
+
+        
+
+        
+        //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
+
+
+            $this->load->view('includes/header', $data);
+            //$this->load->view('transactions/donor_funds_pc', $data);
+            $this->load->view('includes/footer');
+
+     } else {
+            //If no session, redirect to login page
+            redirect('login', 'refresh');
+        }
     }
+
+  
 }                                  
