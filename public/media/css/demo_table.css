@@ -58,13 +58,13 @@
 }
 
 .dataTables_filter {
-	width: 50%;
+	width: 40%;
 	float: right;
 	text-align: right;
 }
 
 .dataTables_info {
-	width: 60%;
+	width: 50%;
 	float: left;
 }
 
@@ -85,6 +85,7 @@
 .paginate_disabled_previous:hover, .paginate_enabled_previous:hover,
 .paginate_disabled_next:hover, .paginate_enabled_next:hover {
 	text-decoration: none !important;
+	
 }
 .paginate_disabled_previous:active, .paginate_enabled_previous:active,
 .paginate_disabled_next:active, .paginate_enabled_next:active {

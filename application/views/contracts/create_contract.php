@@ -60,9 +60,9 @@
 
             <div class="steps">
                 <ul id="progressbar">
-                    <li class="active">Contract Information</li>
-                    <li>Funding Information</li>
-                    <li>Contract Type Information</li>
+                    <li class="active">Create Contract</li>
+                    <li>Allocate Fund</li>
+                    <li>Add Contract Type</li>
                 </ul>
             </div>
 
@@ -90,7 +90,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='contract_code' placeholder="Contract Code" value="<?php print(set_value("contract_code")); ?>">
+                                    <input type='text' ng-model="contract_code" name='contract_code' placeholder="Contract Code" value="<?php print(set_value("contract_code")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -104,7 +104,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='contract_title' placeholder="Contract title" value="<?php print(set_value("contract_title")); ?>">
+                                    <input type='text' ng-model="contract_title" name='contract_title' placeholder="Contract title" value="<?php print(set_value("contract_title")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -118,7 +118,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='activity_type' >
+                                    <select name='activity_type' ng-model="activity_type">
                                         <option value=''><?php (set_value("activity_type")!="")?print(set_value("activity_type")):print("--Select activity type--"); ?></option>
                                         <option value='works'>Works</option>
                                         <option value='goods'>Goods</option>
@@ -139,7 +139,7 @@
                                     <span> </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='proc_type' placeholder="" value="<?php print(set_value("proc_type")); ?>">
+                                    <input type='text' ng-model="proc_type" name='proc_type' placeholder="" value="<?php print(set_value("proc_type")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -153,7 +153,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='status'>
+                                    <select name='status' ng-model="status">
                                         <option value=''><?php (set_value("status")!="")?print(set_value("status")):print("--Select Status--"); ?></option>
                                         <option value='active'>Active</option>
                                         <option value='not_active'>Not Active</option>
@@ -172,7 +172,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_no_objection' placeholder='' id="date_of_no_objection" value="<?php print("date_of_no_objection"); ?>">
+                                    <input type='text' ng-model="date_of_no_objection" name='date_of_no_objection' placeholder='' id="date_of_no_objection" value="<?php print("date_of_no_objection"); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -185,7 +185,6 @@
 
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
                                     <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
                                     </td>
                                 </tr>
@@ -198,7 +197,69 @@
                             <h3 id="myModalLabel">Confirm Information Provided</h3>
                         </div>
                         <div class="modal-body">
-                                
+                            <div class="alert alert-info">
+                               <i class="icon-info"></i> Please Verify the data provided below
+                            </div>
+                            <table id="req_form" class="table table-condensed table-bordered">
+                                    <tr>
+                                        <td class="span3">
+                                            <b>Sub-component code</b>
+                                        </td>
+                                        <td>
+                                            <b><?php echo $this->session->userdata['sub_component_code']; ?></b> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Contract code</b>
+                                        </td>
+                                        <td>
+                                            {{contract_code}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Contract title</b>
+                                        </td>
+                                        <td>
+                                            {{contract_title}}
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td>
+                                            <b>Activity type</b>
+                                            <span> *</span>
+                                        </td>
+                                        <td>
+                                            {{activity_type}}                                                
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Procurement type</b>
+                                        </td>
+                                        <td>
+                                            {{proc_type}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Status</b>
+                                        </td>
+                                        <td>
+                                            {{status}}                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Date of no objection</b>
+                                        </td>
+                                        <td>
+                                            {{date_of_no_objection}}
+                                        </td>
+                                    </tr>  
+                                </tbody>
+                            </table> 
                         </div>
                         <div class="modal-footer">
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>

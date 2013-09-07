@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('#date_of_no_objection').datepicker();
     $( "#date_of_no_objection").datepicker( "option", "dateFormat", "yy-mm-dd");
     
-    $('#programme_table').dataTable({
+    $('#programme_table3').dataTable({
         "sPaginationType": "full_numbers"
     });
     

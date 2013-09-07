@@ -28,13 +28,10 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             </td>
-
-                                </tr>
-                            
+                                    <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             
+                                </td>
+                                </tr>                            
                             <tr>
-                            
-                            
                                 <td>
                                     <b>Date Received</b>
                                     <span> *</span>
@@ -413,7 +410,6 @@
 
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Create Payment Certificate&nbsp;<i class="icon-arrow-right icon-white"></i></button>
                                     <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
                                     </td>
                                 </tr>

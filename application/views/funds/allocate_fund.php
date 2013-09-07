@@ -69,9 +69,9 @@
             
             <div class="steps">
                 <ul id="progressbar">
-                    <li class="active">Fund Information</li>
-                    <li>Add Component</li>
-                    <li>Add Sub-component</li>
+                    <li class="active">Create Program</li>
+                    <li class="active">Add Component</li>
+                    <li class="active">Allocate Fund</li>
                 </ul>
             </div>
             
@@ -99,7 +99,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='fund_donor'>
+                                    <select name='fund_donor' ng-model="fund_donor">
                                         <option value=''><?php (set_value("fund_donor")!="")?print(set_value("fund_donor")):print("--Select Donor--");?></option>
                                         <option value='IDA'>IDA</option>
                                         <option value='GOV'>GOV</option>
@@ -120,7 +120,7 @@
                                     <span> * </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='fund_years' placeholder="2015" value="<?php print(set_value("fund_years")); ?>">
+                                    <input type='text' ng-model="fund_year" name='fund_years' placeholder="2015" value="<?php print(set_value("fund_years")); ?>">
                                 </td>
                                 <td class="span3">
                                     <div class="error-msg">
@@ -134,7 +134,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='fund_amount' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("fund_amount")); ?>">
+                                    <input type='text' ng-model="fund_amount" name='fund_amount' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("fund_amount")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -147,9 +147,8 @@
                                     
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
                                     <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
+                                </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -160,7 +159,45 @@
                             <h3 id="myModalLabel">Confirm Information Provided</h3>
                         </div>
                         <div class="modal-body">
-                                
+                            <div class="alert alert-info">
+                                <i class="icon-info"></i> Please Verify the data provided below
+                            </div>
+                            <table id="req_form" class="table table-condensed table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td class="span3">
+                                            <b>Component Code</b>
+                                        </td>
+                                        <td>
+                                            <b><?php echo $this->session->userdata['component_code'] ?> </b>
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td>
+                                            <b>Fund donor</b>
+                                        </td>
+                                        <td>
+                                            {{fund_donor}}                                                
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>
+                                            <b>Fund Year</b>
+                                        </td>
+                                        <td>
+                                            {{fund_year}}
+                                        </td>
+                                    </tr>                           
+                                    <tr>
+                                        <td>
+                                            <b>Fund Amount</b>
+                                        </td>
+                                        <td>
+                                            {{fund_amount}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="modal-footer">
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>

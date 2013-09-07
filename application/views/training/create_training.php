@@ -26,9 +26,9 @@
             
             <div class="steps">
                 <ul id="progressbar">
-                    <li class="active">Contract Information</li>
-                    <li class="active">Funding Information</li>
-                    <li class="active">Training Information</li>
+                    <li class="active">Add Sub-component</li>
+                    <li class="active">Add Contract</li>
+                    <li class="active">Add Training</li>
                 </ul>
             </div>
 
@@ -40,8 +40,7 @@
                                 <td colspan="3">
                                     Fields marked with the <span>*</span> symbol are required
                                 </td>
-                            </tr>
-                            
+                            </tr>                            
                             <tr>
                                 <td>
                                     <b>Contract code</b>
@@ -50,31 +49,28 @@
                                 <td>
                                     <b><?php echo $this->session->userdata('contract_code'); ?></b>
                                 </td>
-
-                            </tr>
-                            
+                            </tr>                            
                             <tr>
                                 <td>
                                     <b>Date of letter of award</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_letter_of_award' placeholder="" value="<?php print(set_value("date_of_letter_of_award")); ?>">
+                                    <input type='text' ng-model="date_of_letter_of_award" name='date_of_letter_of_award' placeholder="" value="<?php print(set_value("date_of_letter_of_award")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
                                         <?php print(form_error("date_of_letter_of_award")); ?>
                                     </div>
                                 </td>
-                            </tr>
-                            
+                            </tr>                            
                             <tr>
                                 <td>
                                     <b>Delivery date</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='delivery_date' placeholder="" value="<?php print(set_value("delivery_date")); ?>">
+                                    <input type='text' ng-model="delivery_date" name='delivery_date' placeholder="" value="<?php print(set_value("delivery_date")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -89,7 +85,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='training_duration' placeholder="" value="<?php print(set_value("training_duration")); ?>">
+                                    <input type='text' ng-model="trainig_duration" name='training_duration' placeholder="" value="<?php print(set_value("training_duration")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -103,7 +99,7 @@
                                     <span> </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='payment_terms' placeholder="" value="<?php print(set_value("payment_terms")); ?>">
+                                    <input type='text' ng-model="payment_terms" name='payment_terms' placeholder="" value="<?php print(set_value("payment_terms")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -116,11 +112,10 @@
                                     
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
                                     <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                                </td>
+                            </tr>
+                        </tbody>
                         </table>
                     </div>
                     <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -129,7 +124,54 @@
                             <h3 id="myModalLabel">Confirm Information Provided</h3>
                         </div>
                         <div class="modal-body">
-                                
+                            <div class="alert alert-info">
+                                <i class="icon-info"></i> Please Verify the data provided below
+                            </div>
+                            <table id="req_form" class="table table-condensed table-bordered">
+                                <tbody>                           
+                                    <tr>
+                                        <td class="span3">
+                                            <b>Contract code</b>
+                                        </td>
+                                        <td>
+                                            <b><?php echo $this->session->userdata('contract_code'); ?></b>
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td>
+                                            <b>Date of letter of award</b>
+                                        </td>
+                                        <td>
+                                            {{date_of_letter_of_award}}
+                                        </td>
+                                    </tr>                            
+                                    <tr>
+                                        <td>
+                                            <b>Delivery date</b>
+                                        </td>
+                                        <td>
+                                            {{delivery_date}}
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            <b>Training duration</b>
+                                        </td>
+                                        <td>
+                                            {{trainig_duration}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Payment terms</b>
+                                        </td>
+                                        <td>
+                                            {{payment_terms}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>   
                         </div>
                         <div class="modal-footer">
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>

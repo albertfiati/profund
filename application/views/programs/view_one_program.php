@@ -58,7 +58,7 @@
                         </div>
                         <div class='row-fluid'>
                             <div class='span11' style="margin-left: 40px;">
-                                <h3>Program Components </h3>
+                                <h3>Program Components</h3>
                                 
                             </div>
                         </div>

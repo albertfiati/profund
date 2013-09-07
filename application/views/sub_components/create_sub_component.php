@@ -86,7 +86,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='sub_component_title' placeholder="Sub-component title" value="<?php print(set_value("sub_component_title")); ?>">
+                                    <input type='text' ng-model="sub_component_title" name='sub_component_title' placeholder="Sub-component title" value="<?php print(set_value("sub_component_title")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -100,7 +100,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='sub_component_code' placeholder="Sub-component code" value="<?php print(set_value("sub_component_code")); ?>">
+                                    <input type='text' ng-model="sub_component_code" name='sub_component_code' placeholder="Sub-component code" value="<?php print(set_value("sub_component_code")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -114,7 +114,7 @@
                                     <span></span>
                                 </td>
                                 <td>
-                                    <input type='text' name='sub_component_description' placeholder="Sub component description" value="<?php print(set_value("sub_component_description")); ?>">
+                                    <input type='text' ng-model="sub_component_description" name='sub_component_description' placeholder="Sub component description" value="<?php print(set_value("sub_component_description")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -129,7 +129,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='donor_cost' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("donor_cost")); ?>">
+                                    <input type='text' ng-model="donor_cost" name='donor_cost' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("donor_cost")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -143,7 +143,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='local_cost' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("local_cost")); ?>">
+                                    <input type='text' ng-model="local_cost" name='local_cost' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("local_cost")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -156,7 +156,6 @@
                                     
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
                                     <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
                                 </td>
                             </tr>
@@ -169,7 +168,62 @@
                         <h3 id="myModalLabel">Confirm Information Provided</h3>
                     </div>
                     <div class="modal-body">
-                            
+                        <div class="alert alert-info">
+                            <i class="icon-info"></i> Please Verify the data provided below
+                        </div>
+                        <table id="req_form" class="table table-condensed table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="span3">
+                                        <b>Component Code</b>                                        
+                                    </td>
+                                    <td>
+                                        <b><?php echo $this->session->userdata['component_code']; ?></b><br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Sub-component title</b>                                        
+                                    </td>
+                                    <td>
+                                        {{sub_component_title}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Sub-component code</b>                                        
+                                    </td>
+                                    <td>
+                                        {{sub_component_code}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Sub-component description</b>
+                                        <span></span>
+                                    </td>
+                                    <td>
+                                        {{sub_component_description}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Donor cost component</b>                                        
+                                    </td>
+                                    <td>
+                                        {{donor_cost}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Local cost component</b>                                        
+                                    </td>
+                                    <td>
+                                        {{local_cost}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="modal-footer">
                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>

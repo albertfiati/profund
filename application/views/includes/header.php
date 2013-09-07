@@ -3,17 +3,14 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="EN" ng-app>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo $title; ?></title>
         <link href="<?php echo base_url('public/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
         <link href="<?php echo base_url('public/css/module_page_new.css'); ?>" rel="stylesheet" type="text/css"/>
-        <link href="<?php echo base_url('public/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css"/>
-        <!--<link href="<?php // echo base_url('public/css/password_reset.css');                  ?>" rel="stylesheet" type="text/css"/>-->
-        <link href="<?php echo base_url('public/css/new_header.css'); ?>" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="<?php echo base_url('public/media/jquery.dataTables_themeroller.css'); ?>" type="text/css"/>
+        <link href="<?php echo base_url('public/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css"/><link href="<?php echo base_url('public/css/new_header.css'); ?>" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/font-awesome.min.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-buttons.min.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/m-forms.min.css') ?>" type="text/css"/>
@@ -24,18 +21,17 @@ and open the template in the editor.
         <link rel="stylesheet" href="<?php echo base_url('public/css/jquery-ui-1.10.3.custom.min.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/css/progress.css') ?>" type="text/css"/>
         <link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/font-awesome.min.css') ?>" type="text/css"/>
-        <style type="text/css" title="currentStyle">
-            /*@import "../public/media/css/demo_page.css";*/
-            @import "../public/media/css/demo_table.css";
-            /*@import "../public/media/css/TableTools.css";*/
-        </style>
+        <link rel="stylesheet" href="<?php echo base_url('public/media/css/demo_table.css') ?>" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url('public/css/datepicker.css') ?>" type="text/css"/>
     </head>
     <body>
         <div>
-            <!-- <div class="header-top container">
-                <a href="home"><img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund"></a>
-                <div class="clearer"></div>
-            </div> -->
+            <div class="header-main">
+                <div class="header-top container">
+                    <a href="home"><img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund"></a>
+                    <div class="clearer"></div>
+                </div>
+            </div>
             
             <div class="navbar navbar-fixed">  
                 <div class="navbar-inner" style="border-radius: 0px !important;">                       
@@ -68,3 +64,4 @@ and open the template in the editor.
                     </div>
                 </div>  
             </div>
+            <div class="content-container">

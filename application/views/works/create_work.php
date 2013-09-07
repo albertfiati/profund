@@ -56,7 +56,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_tender_opening' placeholder="" value="<?php print(set_value("date_of_tender_opening")); ?>">
+                                    <input type='text' ng-model="date_of_tender_opening" name='date_of_tender_opening' class="datepicker" placeholder="" value="<?php print(set_value("date_of_tender_opening")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -71,7 +71,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_contract_award' placeholder="" value="<?php print(set_value("date_of_contract_award")); ?>">
+                                    <input type='text' ng-name="date_of_contract_award" name='date_of_contract_award' class="datepicker" placeholder="" value="<?php print(set_value("date_of_contract_award")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -85,7 +85,7 @@
                                     <span> </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_signing_agreement' placeholder="" value="<?php print(set_value("date_of_signing_agreement")); ?>">
+                                    <input type='text' ng-model="date_of_signing_agreement" name='date_of_signing_agreement' class="datepicker" placeholder="" value="<?php print(set_value("date_of_signing_agreement")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -99,7 +99,7 @@
                                     <span> </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_commencement' placeholder="" value="<?php print(set_value("date_of_commencement")); ?>">
+                                    <input type='text' ng-model="date_of_commencement" name='date_of_commencement' class="datepicker" placeholder="" value="<?php print(set_value("date_of_commencement")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -114,7 +114,7 @@
                                     <span> </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_contract_completion' placeholder="" value="<?php print(set_value("date_of_contract_completion")); ?>">
+                                    <input type='text' ng-model="date_of_contract_completion" name='date_of_contract_completion' class="datepicker" placeholder="" value="<?php print(set_value("date_of_contract_completion")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -129,7 +129,7 @@
                                     <span> </span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_of_defects_liability' placeholder="" value="<?php print(set_value("date_of_defects_liability")); ?>">
+                                    <input type='text' ng-model="date_of_defects_liability" name='date_of_defects_liability' class="datepicker" placeholder="" value="<?php print(set_value("date_of_defects_liability")); ?>">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -142,9 +142,8 @@
                                     
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
                                     <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
+                                </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -155,7 +154,71 @@
                             <h3 id="myModalLabel">Confirm Information Provided</h3>
                         </div>
                         <div class="modal-body">
-                                
+                            <div class="alert alert-info">
+                                <i class="icon-info"></i> Please Verify the data provided below
+                            </div>
+                            <table id="req_form" class="table table-condensed table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td class="span3">
+                                            <b>Contract code</b>
+                                        </td>
+                                        <td>
+                                            <b><?php echo $this->session->userdata('contract_code'); ?></b>
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>
+                                            <b>Date of tender opening</b>
+                                        </td>
+                                        <td>
+                                            {{date_of_tender_opening}}
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>
+                                            <b>Date of contract award</b>
+                                        </td>
+                                        <td>
+                                            {{date_of_contract_award}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Date of signing agreement</b>
+                                            <span> </span>
+                                        </td>
+                                        <td>
+                                            {{date_of_signing_agreement}}
+                                        </td>
+                                    </tr>                    
+                                    <tr>
+                                        <td>
+                                            <b>Date of commencement</b>
+                                            <span> </span>
+                                        </td>
+                                        <td>
+                                            {{date_of_commencement}}
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>
+                                            <b>Contract completion date</b>
+                                        </td>
+                                        <td>
+                                            {{date_of_contract_completion}}
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>
+                                            <b>Defects liability completion date</b>
+                                        </td>
+                                        <td>
+                                            {{date_of_defects_liability}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>   
                         </div>
                         <div class="modal-footer">
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
