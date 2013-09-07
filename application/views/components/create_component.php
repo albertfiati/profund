@@ -47,17 +47,16 @@
 
             <?php echo form_open('create_component') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-                                <td colspan="3">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <b>Program Code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata['program_code']; ?></b><br />
@@ -67,7 +66,7 @@
                             <tr>
                                 <td>
                                     <b>Title of Component</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="component_title" name='component_title' placeholder="Component Title" value="<?php print(set_value("component_title")); ?>">
@@ -81,7 +80,7 @@
                             <tr>
                                 <td>
                                     <b>Implementing Agency</b>
-                                    <span> *</span>                                    
+                                    <span class="asterik"> *</span>                                    
                                 </td>
                                 <td>
                                     <select name='implementing_agency' ng-model="implementing_agency">
@@ -101,7 +100,7 @@
                             <tr>
                                 <td>
                                     <b>Component Code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="component_code" name='component_code' placeholder="Component Code" value="<?php print(set_value("component_code")); ?>">
@@ -115,7 +114,7 @@
                             <tr>
                                 <td>
                                     <b>Estimated Amount</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="component_amount" name='component_amount' placeholder='E.g. 3,000,000.00' value="<?php print(set_value("component_amount")); ?>">
@@ -127,13 +126,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    
+                                <td>                                    
                                 </td>
                                 <td>
-                                   <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
-                                </tr>
+                                    <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal">
+                                        Next 
+                                        <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                    </a>
+                                </td>
                             </tbody>
                         </table>
                     </div>

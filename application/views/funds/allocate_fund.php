@@ -77,17 +77,16 @@
             
             <?php echo form_open('allocate_fund') ?>                
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-                                <td colspan="2">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <b>Component Code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata['component_code'] ?> </b>
@@ -96,7 +95,7 @@
                             <tr>
                                 <td>
                                     <b>Fund donor</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='fund_donor' ng-model="fund_donor">
@@ -131,7 +130,7 @@
                             <tr>
                                 <td>
                                     <b>Fund Amount</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="fund_amount" name='fund_amount' placeholder='E.g. 1,500,000.00' value="<?php print(set_value("fund_amount")); ?>">
@@ -147,7 +146,10 @@
                                     
                                 </td>
                                 <td>
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
+                                    <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal">
+                                        Next 
+                                        <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                    </a>
                                 </td>
                                 </tr>
                             </tbody>

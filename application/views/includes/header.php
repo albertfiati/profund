@@ -28,7 +28,11 @@ and open the template in the editor.
         <div>
             <div class="header-main">
                 <div class="header-top container">
-                    <a href="home"><img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund"></a>
+                    <div class="span6">
+                        <a href="/">
+                            <img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund">
+                        </a>
+                    </div>
                     <div class="clearer"></div>
                 </div>
             </div>

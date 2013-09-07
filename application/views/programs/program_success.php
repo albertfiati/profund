@@ -49,22 +49,22 @@
                                 <tr>
                                     <td>
                                         <b>Title of Program</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $program_title; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Program Code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $program_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -72,55 +72,55 @@
                                 <tr>
                                     <td>
                                         <b>Commencement Date</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $start_date; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>End Date</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $end_date; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Currency</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $program_currency; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Program Amount</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $program_amount; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Objective of Program</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $program_objective; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>

@@ -41,11 +41,11 @@
                                 <tr>
                                     <td>
                                         <b>Consultancy title</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $consultancy_title; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -53,11 +53,11 @@
                                 <tr>
                                     <td>
                                         <b>Contract code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $contract_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -65,11 +65,11 @@
                                 <tr>
                                     <td>
                                         <b>Date of agreement</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $date_of_agreement; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -77,11 +77,11 @@
                                 <tr>
                                     <td>
                                         <b>Date of commencement</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $date_of_commencement; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -89,11 +89,11 @@
                                 <tr>
                                     <td>
                                         <b>Date of signing agreement</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $date_of_agreement; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -101,11 +101,11 @@
                                 <tr>
                                     <td>
                                         <b>Date of commencement</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $date_of_commencement; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -113,11 +113,11 @@
                                 <tr>
                                     <td>
                                         <b>Date of completion</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $date_of_completion; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>

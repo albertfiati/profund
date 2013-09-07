@@ -30,7 +30,14 @@ body{ margin:0px;
       min-width: 200px;
       margin:auto;}
 
+.asterik{color: #f00;}
+
 .content{margin-top: 15px; border:none !important;}
+
+.my-alert{margin-top:-15px;
+          font-style: italic;}
+
+.my-icon{margin-top: 3px !important;}
 
 .actions{width:108px;}
 
@@ -99,7 +106,7 @@ body{
     clear: both;
 }
 
-.content-container{min-height: 450px;}
+.content-container{min-height: 423px;}
 
 .header-main{background-image: url("../img/noise.jpg");}
 
@@ -476,11 +483,12 @@ li{
 
 .footer{
     height: 50px;
-    padding-top: 10px;
+    padding-top: 15px;
     text-align: center;
     border-top: 1px solid #ccc;
-    margin-top: 30px;
+    margin-top: 20px;
+    z-index: 1000;
     margin-bottom: -10px;
-    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    text-shadow: 0 1px 0 #fff;
     background-image: url("../img/noise.jpg");
 }

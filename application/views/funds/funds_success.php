@@ -56,20 +56,7 @@
                                     <td>
                                        <?php echo $this->session->userdata['component_amount']; ?>
                                     </td>
-                                </tr>
-                                
-<!--                               <tr>
-                                    <td><span>Allocated Fund</span></td>
-                                </tr>
-                                
-                                <tr>
-                                    <td>
-                                       <?php echo $this->session->userdata['component_amount'] - $this->session->userdata['unallocatedr']; ?>
-                                    </td>
-                                </tr>-->
-                                
-                                
-                                
+                                </tr>                                
                             </tbody>
                         </table>
                     </div>
@@ -105,62 +92,6 @@
                 <?php endforeach ?>
             </tbody>
         </table>
-                        
-   
-<!--                        <table id="req_form">
-                            <tbody>
-                   
-                                
-                                <tr>
-                                    <td>
-                                        <b>Component Code</b>
-                                        <span> *</span>
-                                    </td>
-                                    <td>
-                                        <b><?php echo $component_code; ?></b>
-                                    </td>
-
-                                </tr>
-                                
-                                <tr>
-                                    <td>
-                                        <b>Fund donor</b>
-                                        <span> *</span>
-                                    </td>
-                                    <td>
-                                        <b><?php echo $fund_donor; ?></b>
-                                    </td>
-
-                                </tr>
-                                
-                                <tr>
-                                    <td>
-                                        <b>Fund year</b>
-                                        <span> </span>
-                                    </td>
-                                    <td>
-                                        <b><?php echo $fund_years; ?></b>
-                                    </td>
-
-                                </tr>
-                               
-                                <tr>
-                                    <td>
-                                        <b>Fund amount</b>
-                                        <span> *</span>
-                                    </td>
-                                    <td>
-                                        <b><?php echo $fund_amount; ?></b>
-                                    </td>
-
-                                </tr>
-                                
-                                
-       
-                            </tbody>
-                        </table>
-                        
-                        <div id="req_footer">-->
                             <table>
                                 <tbody>
                                     <tr>

@@ -148,7 +148,7 @@
                                             <a class="btn btn-danger" data-toggle="modal" href="program_summary" style="margin-left: 30px;">
                                                 <i class="icon-white icon-search"></i>&nbsp;Preview
                                             </a>
-                                            <button class="btn btn-success">Next&nbsp;<i class="icon-arrow-right icon-white"></i></button>
+                                            <button class="btn btn-success">Next&nbsp;<i class="m-icon-swapright m-icon-white my-icon pull-right"></i></button>
                                             
                                         </td>
                                     </tr>

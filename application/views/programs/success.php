@@ -49,13 +49,13 @@
                             <tbody>
                                 <tr>
                                     <td colspan="2">
-                                        Fields marked with the <span>*</span> symbol are required
+                                        Fields marked with the <span class="asterik">*</span> symbol are required
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Title of Program</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <input type='text' name='program_title' placeholder="Program Title">
@@ -65,7 +65,7 @@
                                 <tr>
                                     <td>
                                         <b>Program Code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <input type='text' name='program_code' placeholder="Program Code">
@@ -76,7 +76,7 @@
                                 <tr>
                                     <td>
                                         <b>Commencement Date</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <input type='text' name='start_date'>
@@ -86,7 +86,7 @@
                                 <tr>
                                     <td>
                                         <b>End Date</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <input type='text' name='end_date'>
@@ -96,7 +96,7 @@
                                 <tr>
                                     <td>
                                         <b>Currency</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <select name='program_currency'>
@@ -110,7 +110,7 @@
                                 <tr>
                                     <td>
                                         <b>Program Amount</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <input type='text' name='program_amount' placeholder='E.g. 6,000,000.00'>
@@ -120,7 +120,7 @@
                                 <tr>
                                     <td>
                                         <b>Objective of Program</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <textarea name='program_objective' placeholder="Objective of Program" ></textarea>
@@ -138,7 +138,7 @@
                                             <a class="btn btn-danger" data-toggle="modal" href="program_summary" style="margin-left: 30px;">
                                                 <i class="icon-white icon-search"></i>&nbsp;Preview
                                             </a>
-                                            <button class="btn btn-success">Next&nbsp;<i class="icon-arrow-right icon-white"></i></button>
+                                            <button class="btn btn-success">Next&nbsp;<i class="m-icon-swapright m-icon-white my-icon pull-right"></i></button>
                                             
                                         </td>
                                     </tr>

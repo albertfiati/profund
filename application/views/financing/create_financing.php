@@ -24,31 +24,25 @@
         </div>
         <div class="span8 pull-right" id="user_menu">
             
-            <div id="program_status">
-                <ul class="nav nav-pills">
-                    <li class="active">
-                        <a href="">Fill in Contract Information</a>
-                    </li>
-                    <li class="active" style="background-color:red ;">
-                        <a href="">Fill in Contract Financing Information</a>
-                    </li>
+             <div class="steps">
+                <ul id="progressbar">
+                    <li class="active">Create Contract</li>
+                    <li class="active">Create Financing</li>
                 </ul>
             </div>
             
             <?php echo form_open('create_financing') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-                                <td colspan="2">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            
-                            <tr>
                                 <td>
                                     <b>Contract code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata('contract_code'); ?></b>
@@ -58,7 +52,7 @@
                             <tr>
                                 <td>
                                     <b>Facility</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="facility" name='facility' placeholder="Credit" value="<?php print(set_value("facility")); ?>">
@@ -157,11 +151,13 @@
                             </tr>
                             <tr>
                                 <td>
-
                                 </td>
                                 <td>
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
+                                    <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal">
+                                        Next 
+                                        <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                    </a>
+                                </td>
                                 </tr>
                             </tbody>
                         </table>

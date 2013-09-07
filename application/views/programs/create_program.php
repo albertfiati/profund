@@ -26,7 +26,7 @@
 
             <div class="steps">
                 <ul id="progressbar">
-                    <li class="active">Program Information</li>
+                    <li class="active">Create Program</li>
                     <li>Add Component</li>
                     <li>Add Sub-component</li>
                 </ul>
@@ -38,16 +38,15 @@
 
             <div class="form-padding">
                 <table id="req_form">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <tbody>
-                        <tr>
-                            <td colspan="3">
-                                Fields marked with the <span>*</span> symbol are required
-                            </td>
-                        </tr>
                         <tr>
                             <td>
                                 <b>Title of Program</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <input type='text' ng-model="program_title" name='program_title' placeholder="Program Title" value="<?php print(set_value("program_title")); ?>">                                
@@ -61,7 +60,7 @@
                         <tr>
                             <td>
                                 <b>Program Code</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <input type='text' ng-model="program_code" name='program_code' placeholder="Program Code" value="<?php print(set_value("program_code")); ?>">
@@ -76,7 +75,7 @@
                         <tr>
                             <td>
                                 <b>Commencement Date</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <input type='text' ng-model="start_date" name='start_date' class='datepicker' value="<?php print(set_value("program_start_date")); ?>">
@@ -90,7 +89,7 @@
                         <tr>
                             <td>
                                 <b>End Date</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <input type='text' ng-model="end_date" name='end_date' class="datepicker" value="<?php print(set_value("program_end_date")); ?>">
@@ -104,7 +103,7 @@
                         <tr>
                             <td>
                                 <b>Currency</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <select ng-model="program_currency" name='program_currency' value="<?php print(set_value("program_currency")); ?>">
@@ -122,7 +121,7 @@
                         <tr>
                             <td>
                                 <b>Program Amount</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <input ng-model="program_amount" type='text' name='program_amount' placeholder='E.g. 6,000,000.00' value="<?php print(set_value("program_amount")); ?>">
@@ -136,7 +135,7 @@
                         <tr>
                             <td>
                                 <b>Objective of Program</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
                                 <textarea ng-model="program_objective" name='program_objective' placeholder="Objective of Program" ><?php print(set_value("program_objective")); ?></textarea>
@@ -148,11 +147,13 @@
                             </td>
                         </tr>                        
                         <tr>
-                            <td>
-                                
+                            <td>                                
                             </td>
                             <td>
-                               <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success span2" data-toggle="modal" onclick="">Next <i class="icon-arrow-right icon-white"></i></a>
+                                <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal" style="margin-top:10px;">
+                                    Next 
+                                    <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                </a>
                             </td>
                         </tr>
                     </tbody>

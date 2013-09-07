@@ -68,17 +68,16 @@
 
             <?php echo form_open('create_contract') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-                                <td colspan="2">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <b>Sub-component code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata['sub_component_code']; ?></b> 
@@ -87,7 +86,7 @@
                             <tr>
                                 <td>
                                     <b>Contract code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="contract_code" name='contract_code' placeholder="Contract Code" value="<?php print(set_value("contract_code")); ?>">
@@ -101,7 +100,7 @@
                             <tr>
                                 <td>
                                     <b>Contract title</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="contract_title" name='contract_title' placeholder="Contract title" value="<?php print(set_value("contract_title")); ?>">
@@ -115,7 +114,7 @@
                             <tr>
                                 <td>
                                     <b>Activity type</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='activity_type' ng-model="activity_type">
@@ -150,7 +149,7 @@
                             <tr>
                                 <td>
                                     <b>Status</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='status' ng-model="status">
@@ -169,7 +168,7 @@
                             <tr>
                                 <td>
                                     <b>Date of no objection</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="date_of_no_objection" name='date_of_no_objection' placeholder='' id="date_of_no_objection" value="<?php print("date_of_no_objection"); ?>">
@@ -185,9 +184,11 @@
 
                                 </td>
                                 <td>
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
-                                </tr>
+                                    <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal">
+                                        Next 
+                                        <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                    </a>
+                                </td>
                             </tbody>
                         </table>
                     </div>
@@ -228,7 +229,7 @@
                                     <tr>
                                         <td>
                                             <b>Activity type</b>
-                                            <span> *</span>
+                                            <span class="asterik"> *</span>
                                         </td>
                                         <td>
                                             {{activity_type}}                                                

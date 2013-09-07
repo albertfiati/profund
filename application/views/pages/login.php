@@ -28,7 +28,7 @@
             </div>
             <div class="control-group">
                 <button id="login-btn" class="m-btn blue pull-right">
-                    Login <i class="m-icon-swapright m-icon-white"></i>
+                    Login <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
                 </button>
             </div>
             <!-- <div class="form-actions">

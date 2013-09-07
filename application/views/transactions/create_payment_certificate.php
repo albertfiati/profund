@@ -15,17 +15,16 @@
 
             <?php echo form_open('create_payment_certificate') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-                                <td colspan="3">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <b>Sub-component code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             
@@ -34,7 +33,7 @@
                             <tr>
                                 <td>
                                     <b>Date Received</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='date_received' placeholder="">
@@ -48,7 +47,7 @@
                             <tr>
                                 <td>
                                     <b>Stage</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='stage'>
@@ -66,7 +65,7 @@
                             <tr>                            
                                 <td>
                                     <b>Asset account (civil works)</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='asset_account' placeholder="">
@@ -80,7 +79,7 @@
                             <tr>
                                 <td>
                                     <b>Certificate number</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='certificate_number' placeholder="">
@@ -94,7 +93,7 @@
                             <tr>
                                 <td>
                                     <b>Contract number</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='contract_number' placeholder="">
@@ -108,7 +107,7 @@
                             <tr>
                                 <td>
                                     <b>Contractor</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='contractor' placeholder="">
@@ -122,7 +121,7 @@
                             <tr>                     
                                 <td>
                                     <b>Agency</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='agency' placeholder="">
@@ -136,7 +135,7 @@
                             <tr>
                                 <td>
                                     <b>Location</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='location'>
@@ -162,7 +161,7 @@
                             <tr>                     
                                 <td>
                                     <b>Transaction currency</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='transaction_currency' placeholder="">
@@ -176,7 +175,7 @@
                             <tr>                     
                                 <td>
                                     <b>Rate to Cedi</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='agency' placeholder="">
@@ -190,7 +189,7 @@
                             <tr>                     
                                 <td>
                                     <b>Rate to USD</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='rate_to_usd' placeholder="">
@@ -204,7 +203,7 @@
                             <tr>                     
                                 <td>
                                     <b>Reference to Works Completed (as defined in the contract)</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='reference_to_works_conpleted' placeholder="">
@@ -218,7 +217,7 @@
                             <tr>                     
                                 <td>
                                     <b>Gross value of work done (In Txn CCY)</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='gross_value_of_work_done' placeholder="">
@@ -233,13 +232,13 @@
                                 <td>
                                     <hr/>
                                     <b>Less</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                             </tr>
                             <tr>                     
                                 <td>
                                     <b>+/- Fluctuation in amount payable</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='fluctuation_in_amount_payable' placeholder="">
@@ -254,7 +253,7 @@
                      
                                 <td>
                                     <b>=/- Liquidation damages</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='liquidaion_damages' placeholder="">
@@ -268,7 +267,7 @@
                             <tr>                     
                                 <td>
                                     <b>Deduction for mobilisation advance</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='deduction_for_mobilisation_advance' placeholder="">
@@ -282,7 +281,7 @@
                             <tr>                     
                                 <td>
                                     <b>Retention</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='retention' placeholder="">
@@ -296,7 +295,7 @@
                             <tr>                     
                                 <td>
                                     <b>Withholding tax</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='withholding_tax' placeholder="">
@@ -310,7 +309,7 @@
                             <tr>                     
                                 <td>
                                     <b>Asroc dues</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='asroc_dues' placeholder="">
@@ -324,7 +323,7 @@
                             <tr>                     
                                 <td>
                                     <b>Other deductions</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='other_deductions' placeholder="">
@@ -338,7 +337,7 @@
                             <tr>                     
                                 <td>
                                     <b>Net amount payable</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='net_amount_payable' placeholder="">
@@ -352,7 +351,7 @@
                             <tr>                     
                                 <td>
                                     <b>Amount payable by donors</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='amount_payable_to_donors' placeholder="">
@@ -366,7 +365,7 @@
                             <tr>                     
                                 <td>
                                     <b>Amount payable by local sources</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='amount_payable_to_local_sources' placeholder="">
@@ -380,7 +379,7 @@
                             <tr>                     
                                 <td>
                                     <b>Make payment directly to: </b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='make_direct_payment_to' placeholder="">
@@ -394,7 +393,7 @@
                             <tr>                     
                                 <td>
                                     <b>Payment method</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='payment_method' placeholder="">
@@ -410,7 +409,7 @@
 
                                 </td>
                                 <td>
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
+                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="m-icon-swapright m-icon-white my-icon pull-right"></i></a>
                                     </td>
                                 </tr>
                             </tbody>

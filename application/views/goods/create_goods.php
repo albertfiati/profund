@@ -34,18 +34,16 @@
             
             <?php echo form_open('create_goods') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
-                        <tbody>
-                            <tr>
-                                <td colspan="2">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            
+                        <tbody>                            
                             <tr>
                                 <td>
                                     <b>Contract code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata('contract_code'); ?></b>
@@ -56,7 +54,7 @@
                             <tr>
                                 <td>
                                     <b>Date of letter of award</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="date_of_letter_of_award" name='date_of_letter_of_award' class="datepicker" placeholder="" value="<?php print(set_value("date_of_letter_of_award")); ?>">
@@ -71,7 +69,7 @@
                             <tr>
                                 <td>
                                     <b>Delivery date</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' ng-model="delivery_date" name='delivery_date' placeholder="" class="datepicker" value="<?php print(set_value("delivery_date")); ?>">
@@ -101,9 +99,11 @@
                                     
                                 </td>
                                 <td>
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
-                                </tr>
+                                    <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal">
+                                        Next 
+                                        <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                    </a>
+                                </td>
                             </tbody>
                         </table>
                     </div>

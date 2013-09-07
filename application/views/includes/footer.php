@@ -1,6 +1,9 @@
 	</div>
 	<div class="footer">
-		<p>Ghana Highway Authority &copy; 2013</p>
+		<p>
+			<img src="<?php echo base_url('public/img/coa.png'); ?>" style="max-width:30px; max-height:30px;" title="Profund" alt="Profund">
+			Ministry of Roads and Highways &copy; 2013
+		</p>
 	</div>
 	<!--
 	To change this template, choose Tools | Templates
