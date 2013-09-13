@@ -1,6 +1,6 @@
 <?php
 
-class Payment_certificate_model extends CI_Model {
+class Payment_request_for_op_model extends CI_Model {
 
 	public function __construct()
 	{
@@ -48,7 +48,7 @@ public function set_contract()
         
 }
 
-public function set_payment_certificate()
+public function set_payment_request_for_op()
 {
     $this->load->helper('url');    
 
@@ -91,7 +91,7 @@ public function set_payment_certificate()
     );          
 
     
-    $this->db->insert('payment_certificate', $data);
+    $this->db->insert('payment_request_for_op', $data);
         return $data;
         
 }

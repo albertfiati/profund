@@ -32,10 +32,10 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <!-- <div class="header-top container">
+            <div class="header-top container">
                 <a href="home"><img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund"></a>
                 <div class="clearer"></div>
-            </div> -->
+            </div> 
             
             <div class="navbar navbar-fixed">  
                 <div class="navbar-inner" style="border-radius: 0px !important;">                       
@@ -52,6 +52,14 @@ and open the template in the editor.
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transactions <b class="caret"></b></a>  
                                 <ul class="dropdown-menu">  
                                     <li><a href="<?php echo base_url();?>index.php/validate_contract_code">Payment  certificate</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code_req">Payment  request for goods or services</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code_op">Payment  request for operating expenses</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_payment_certificate_code">Application for withdrawal</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_application_for_special_transfer">Application for special transfer</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_exchange_gain_loss">Exchange gain/loss</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_bank_interest_earned">Bank interest earned</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_bank_charges">Bank charges</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_cash_transfer">Cash transfer</a></li>
                                 </ul>  
                             </li>  
                         </ul>
