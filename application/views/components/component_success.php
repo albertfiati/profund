@@ -34,14 +34,6 @@
                         </table>
                     </div>
                     <div class="span8" id="user_menu">
-<!--                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href=""><i class="icon-plus-sign"></i>New Program</a>
-                            </li>
-                            <li>
-                                <a href=""><i class="icon-list-alt"></i>Program History</a>
-                            </li>
-                        </ul>-->
                         <div id="program_status">
                             <div class="row">
                                 <div class="alert_msg">
@@ -57,22 +49,22 @@
                                 <tr>
                                     <td>
                                         <b>Title of Component</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $component_title; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Implementing agency</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $implementing_agency; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -80,11 +72,11 @@
                                 <tr>
                                     <td>
                                         <b>Component code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $component_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -92,11 +84,11 @@
                                 <tr>
                                     <td>
                                         <b>Program code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $program_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -104,11 +96,11 @@
                                 <tr>
                                     <td>
                                         <b>Estimated amount</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $component_amount; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>

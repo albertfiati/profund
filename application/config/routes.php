@@ -113,6 +113,27 @@ $route['create_exchange_gain_loss'] = 'exchange_gain_loss/create_exchange_gain_l
 $route['create_bank_charges'] = 'bank_charges/create_bank_charges';
 $route['create_cash_transfer'] = 'cash_transfer/create_cash_transfer';
 
+$route['validate_contract_pay_inst_bank'] = 'payment_instruction_to_bank/validate_contract_code';
+$route['validate_cont_pay_inst_bank']       = 'payment_instruction_to_bank/validate_contract';
+$route['create_payment_advice_from_donor']            = 'payment_advice_from_donor/new_transaction';
+
+
+$route['validate_contract_code_ad_don'] = 'payment_advice_from_donor/validate_contract_code';
+$route['validate_contract_ad_don']       = 'payment_advice_from_donor/validate_contract';
+$route['create_payment_advice_from_donor']            = 'payment_advice_from_donor/new_transaction';
+
+$route['create_payment_advice_to_replenish_special_account'] = 'payment_advice_to_replenish_special_account/create_payment_advice_to_replenish_special_account';
+
+//Reports
+$route['validate_report_form'] = 'contractors_ledger/validate_report_form';
+$route['create_contractors_ledger'] = 'contractors_ledger/create_contractors_ledger';
+
+$route['validate_sector_funds'] = 'sector_funds/validate_sector_funds';
+$route['create_sector_funds'] = 'sector_funds/create_sector_funds';
+
+$route['validate_sector_funds_per_agency'] = 'sector_funds_per_agency/validate_sector_funds_per_agency';
+$route['create_sector_funds_per_agency'] = 'sector_funds_per_agency/create_sector_funds_per_agency';
+
 $route['logout'] = 'home/logout';
 
 $route['default_controller'] = "home";

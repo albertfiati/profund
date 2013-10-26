@@ -8,6 +8,15 @@ class Application_for_withdrawal_model extends CI_Model {
 	}
         
         
+public function get_application_for_withdrawals(){
+    $query = $this->db->get('application_for_redrawal');
+    return $query->result_array();
+}
+
+public function get_application_for_withdrawals2($program_code){
+    $query = $this->db->get_where('application_for_redrawal', array("program_code" => $program_code));
+    return $query->result_array();
+}
 
 public function get_contract($contract_code) 
     {

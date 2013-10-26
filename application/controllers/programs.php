@@ -32,8 +32,7 @@ function logout() {
         redirect('home', 'refresh');
     }
 
-	public function view()
-{
+public function view(){
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
         

@@ -92,9 +92,14 @@
 
             <?php echo form_open('create_payment_certificate') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
+<<<<<<< HEAD
                                 <td colspan="3">
                                     Fields marked with the <span>*</span> symbol are required
                                 </td>
@@ -102,9 +107,20 @@
                 
                             
                             
+=======
+                                <td>
+                                    <b>Sub-component code</b>
+                                    <span class="asterik"> *</span>
+                                </td>
+                                <td>
+                                    <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             
+                                </td>
+                                </tr>                            
+                            <tr>
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                                 <td>
                                     <b>Date Received</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='date_received' placeholder="">
@@ -118,7 +134,7 @@
                             <tr>
                                 <td>
                                     <b>Stage</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='stage'>
@@ -136,7 +152,7 @@
                             <tr>                            
                                 <td>
                                     <b>Asset account (civil works)</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='asset_account' placeholder="160001">
@@ -150,7 +166,7 @@
                             <tr>
                                 <td>
                                     <b>Certificate number</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='certificate_number' placeholder="">
@@ -161,11 +177,56 @@
                                     </div>
                                 </td>
                             </tr>                            
+<<<<<<< HEAD
                                  
+=======
+                            <tr>
+                                <td>
+                                    <b>Contract number</b>
+                                    <span class="asterik"> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='contract_number' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("contract_number")); ?>
+                                    </div>
+                                </td>
+                            </tr>                            
+                            <tr>
+                                <td>
+                                    <b>Contractor</b>
+                                    <span class="asterik"> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='contractor' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("contractor")); ?>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>                     
+                                <td>
+                                    <b>Agency</b>
+                                    <span class="asterik"> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='agency' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("agency")); ?>
+                                    </div>
+                                </td>
+                            </tr>                            
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                             <tr>
                                 <td>
                                     <b>Location</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <select name='location'>
@@ -191,7 +252,7 @@
                             <tr>                     
                                 <td>
                                     <b>Transaction currency</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='transaction_currency' placeholder="">
@@ -205,7 +266,7 @@
                             <tr>                     
                                 <td>
                                     <b>Rate to Cedi</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='agency' placeholder="">
@@ -219,7 +280,7 @@
                             <tr>                     
                                 <td>
                                     <b>Rate to USD</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='rate_to_usd' placeholder="">
@@ -230,11 +291,28 @@
                                     </div>
                                 </td>
                             </tr>                            
+<<<<<<< HEAD
                                                      
+=======
+                            <tr>                     
+                                <td>
+                                    <b>Reference to Works Completed (as defined in the contract)</b>
+                                    <span class="asterik"> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='reference_to_works_conpleted' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("reference_to_works_conpleted")); ?>
+                                    </div>
+                                </td>
+                            </tr>                            
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                             <tr>                     
                                 <td>
                                     <b>Gross value of work done (In Txn CCY)</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='gross_value_of_work_done' placeholder="">
@@ -249,13 +327,13 @@
                                 <td>
                                     <hr/>
                                     <b>Less</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                             </tr>
                             <tr>                     
                                 <td>
                                     <b>+/- Fluctuation in amount payable</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='fluctuation_in_amount_payable' placeholder="">
@@ -270,7 +348,7 @@
                      
                                 <td>
                                     <b>=/- Liquidation damages</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='liquidaion_damages' placeholder="">
@@ -284,7 +362,7 @@
                             <tr>                     
                                 <td>
                                     <b>Deduction for mobilisation advance</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='deduction_for_mobilisation_advance' placeholder="">
@@ -298,7 +376,7 @@
                             <tr>                     
                                 <td>
                                     <b>Retention</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='retention' placeholder="">
@@ -312,7 +390,7 @@
                             <tr>                     
                                 <td>
                                     <b>Withholding tax</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='withholding_tax' placeholder="">
@@ -326,7 +404,7 @@
                             <tr>                     
                                 <td>
                                     <b>Asroc dues</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='asroc_dues' placeholder="">
@@ -340,7 +418,7 @@
                             <tr>                     
                                 <td>
                                     <b>Other deductions</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='other_deductions' placeholder="">
@@ -354,7 +432,7 @@
                             <tr>                     
                                 <td>
                                     <b>Net amount payable</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='net_amount_payable' placeholder="">
@@ -384,8 +462,13 @@
 
                             <tr>                     
                                 <td>
+<<<<<<< HEAD
                                     <b>Make payment directly to: </b>
                                     <span> *</span>
+=======
+                                    <b>Amount payable by donors</b>
+                                    <span class="asterik"> *</span>
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                                 </td>
                                 <td>
                                     <input type='text' name='make_direct_payment_to' placeholder="">
@@ -398,6 +481,7 @@
                             </tr>                            
                             <tr>                     
                                 <td>
+<<<<<<< HEAD
                                     <b>Payment method</b>
                                     <span> *</span>
                                 </td>
@@ -438,6 +522,10 @@
                                 <td>
                                     <b>Withholding tax</b>
                                     <span> *</span>
+=======
+                                    <b>Amount payable by local sources</b>
+                                    <span class="asterik"> *</span>
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                                 </td>
                                 <td>
                                     <input type='text' name='withholding_tax' placeholder="">
@@ -450,8 +538,13 @@
                             </tr>                            
                             <tr>                     
                                 <td>
+<<<<<<< HEAD
                                     <b>Asroc dues</b>
                                     <span> *</span>
+=======
+                                    <b>Make payment directly to: </b>
+                                    <span class="asterik"> *</span>
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                                 </td>
                                 <td>
                                     <input type='text' name='asroc_dues' placeholder="">
@@ -464,8 +557,13 @@
                             </tr>                            
                             <tr>                     
                                 <td>
+<<<<<<< HEAD
                                     <b>Other deductions</b>
                                     <span> *</span>
+=======
+                                    <b>Payment method</b>
+                                    <span class="asterik"> *</span>
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                                 </td>
                                 <td>
                                     <input type='text' name='other_deductions' placeholder="">
@@ -482,6 +580,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
+<<<<<<< HEAD
                                     <input type='text' name='net_amount_payable' placeholder="">
                                 </td>
                                 <td class="span3" >
@@ -490,6 +589,20 @@
                                     </div>
                                 </td>
                             </tr>   
+=======
+                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="m-icon-swapright m-icon-white my-icon pull-right"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Confirm Information Provided</h3>
+                        </div>
+                        <div class="modal-body">
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
                                 
                         </div>
                         <div class="modal-footer">

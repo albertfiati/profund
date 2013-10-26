@@ -39,7 +39,7 @@
         <div class="span8 pull-right" id="user_menu">
             <div class="steps">
                 <ul id="progressbar">
-                    <li class="active">Program Information</li>
+                    <li class="active">Create Program</li>
                     <li class="active">Add Component</li>
                     <li>Add Sub-component</li>
                 </ul>
@@ -47,17 +47,16 @@
 
             <?php echo form_open('create_component') ?>
                 <div class="form-padding">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-                                <td colspan="3">
-                                    Fields marked with the <span>*</span> symbol are required
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <b>Program Code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
                                     <b><?php echo $this->session->userdata['program_code']; ?></b><br />
@@ -67,10 +66,10 @@
                             <tr>
                                 <td>
                                     <b>Title of Component</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='component_title' placeholder="Component Title" value="<?php print(set_value("component_title")); ?>">
+                                    <input type='text' ng-model="component_title" name='component_title' placeholder="Component Title" value="<?php print(set_value("component_title")); ?>">
                                 </td>
                                 <td class="span3">
                                     <div class="error-msg">
@@ -81,10 +80,10 @@
                             <tr>
                                 <td>
                                     <b>Implementing Agency</b>
-                                    <span> *</span>                                    
+                                    <span class="asterik"> *</span>                                    
                                 </td>
                                 <td>
-                                    <select name='implementing_agency'>
+                                    <select name='implementing_agency' ng-model="implementing_agency">
                                         <option value=''><?php (set_value("implementing_agency")!="")?print(set_value("implementing_agency")):print(set_value("--Select agency--"));?></option>
                                         <option value='MRH'>MRH</option>
                                         <option value='GES'>GES</option>
@@ -101,10 +100,10 @@
                             <tr>
                                 <td>
                                     <b>Component Code</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='component_code' placeholder="Component Code" value="<?php print(set_value("component_code")); ?>">
+                                    <input type='text' ng-model="component_code" name='component_code' placeholder="Component Code" value="<?php print(set_value("component_code")); ?>">
                                 </td>
                                 <td class="span3">
                                     <div class="error-msg">
@@ -115,10 +114,10 @@
                             <tr>
                                 <td>
                                     <b>Estimated Amount</b>
-                                    <span> *</span>
+                                    <span class="asterik"> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='component_amount' placeholder='E.g. 3,000,000.00' value="<?php print(set_value("component_amount")); ?>">
+                                    <input type='text' ng-model="component_amount" name='component_amount' placeholder='E.g. 3,000,000.00' value="<?php print(set_value("component_amount")); ?>">
                                 </td>
                                 <td class="span3">
                                     <div class="error-msg">
@@ -127,14 +126,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    
+                                <td>                                    
                                 </td>
                                 <td>
-                                    <button class="btn btn-success" id="submit_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button>
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
-                                </tr>
+                                    <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal">
+                                        Next 
+                                        <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                    </a>
+                                </td>
                             </tbody>
                         </table>
                     </div>
@@ -144,7 +143,53 @@
                             <h3 id="myModalLabel">Confirm Information Provided</h3>
                         </div>
                         <div class="modal-body">
-                                
+                            <div class="alert alert-info">
+                                <i class="icon-info"></i> Please Verify the data provided below
+                            </div>
+                            <table id="req_form" class="table table-condensed table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td class="span3">
+                                            <b>Program Code</b>
+                                        </td>
+                                        <td>
+                                            <b><?php echo $this->session->userdata['program_code']; ?></b><br />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Title of Component</b>
+                                        </td>
+                                        <td>
+                                            <span>{{component_title}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Implementing Agency</b>                             
+                                        </td>
+                                        <td>
+                                            <span>{{implementing_agency}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Component Code</b>
+                                        </td>
+                                        <td>
+                                            <span>{{component_code}}
+                                        </td>
+                                    </tr>                           
+                                    <tr>
+                                        <td>
+                                            <b>Estimated Amount</b>
+                                        </td>
+                                        <td>
+                                            <span id="amount">{{component_amount}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="modal-footer">
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>

@@ -1,23 +1,23 @@
 <div class="container">
     <div class="row dashboard">
         <div class="span3 user_summary thumbnail">
-            <table>
+            <table class="table table-condensed table-bordered">
                 <tbody>
                     <tr>
-                        <td>
-                            <span>Staff Position</span>
-                        </td>
-                    </tr>
-                    <tr>
+                        <td class="span1">Staff Position</td>
                         <td>Accountant</td>
                     </tr>
                     <tr>
-                        <td><span>Department</span></td>
+                        <td>Accountant</td>
+                        <td>Accountant</td>
                     </tr>
                     <tr>
-                        <td>
-                            Marketing
-                        </td>
+                        <td>Department</td>
+                        <td>Accountant</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>Accountant</td>
                     </tr>
                 </tbody>
             </table>
@@ -26,7 +26,7 @@
 
             <div class="steps">
                 <ul id="progressbar">
-                    <li class="active">Program Information</li>
+                    <li class="active">Create Program</li>
                     <li>Add Component</li>
                     <li>Add Sub-component</li>
                 </ul>
@@ -38,19 +38,18 @@
 
             <div class="form-padding">
                 <table id="req_form">
+                    <div class="alert alert-info my-alert">
+                        <i class="icon-info"></i>
+                        Fields marked with the <span class="asterik">*</span> symbol are required
+                    </div>
                     <tbody>
-                        <tr>
-                            <td colspan="3">
-                                Fields marked with the <span>*</span> symbol are required
-                            </td>
-                        </tr>
                         <tr>
                             <td>
                                 <b>Title of Program</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <input type='text' name='program_title' placeholder="Program Title" value="<?php print(set_value("program_title")); ?>">                                
+                                <input type='text' ng-model="program_title" name='program_title' placeholder="Program Title" value="<?php print(set_value("program_title")); ?>">                                
                             </td>
                             <td class="span3" >
                                 <div class="error-msg">
@@ -61,10 +60,10 @@
                         <tr>
                             <td>
                                 <b>Program Code</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <input type='text' name='program_code' placeholder="Program Code" value="<?php print(set_value("program_code")); ?>">
+                                <input type='text' ng-model="program_code" name='program_code' placeholder="Program Code" value="<?php print(set_value("program_code")); ?>">
                             </td>
                             <td class="span3" >
                                 <div class="error-msg">
@@ -76,10 +75,10 @@
                         <tr>
                             <td>
                                 <b>Commencement Date</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <input type='text' name='start_date' id="program_start_date" value="<?php print(set_value("program_start_date")); ?>">
+                                <input type='text' ng-model="start_date" name='start_date' class='datepicker' value="<?php print(set_value("program_start_date")); ?>">
                             </td>
                             <td class="span3" >
                                 <div class="error-msg">
@@ -90,10 +89,10 @@
                         <tr>
                             <td>
                                 <b>End Date</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <input type='text' name='end_date' id="program_end_date" value="<?php print(set_value("program_end_date")); ?>">
+                                <input type='text' ng-model="end_date" name='end_date' class="datepicker" value="<?php print(set_value("program_end_date")); ?>">
                             </td>
                             <td class="span3" >
                                 <div class="error-msg">
@@ -104,10 +103,10 @@
                         <tr>
                             <td>
                                 <b>Currency</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <select name='program_currency' value="<?php print(set_value("program_currency")); ?>">
+                                <select ng-model="program_currency" name='program_currency' value="<?php print(set_value("program_currency")); ?>">
                                     <option value=''>--Select Currency--</option>
                                     <option value='1'>US Dollars</option>
                                     <option value='2'>GH Cedi</option>
@@ -122,10 +121,10 @@
                         <tr>
                             <td>
                                 <b>Program Amount</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <input type='text' name='program_amount' placeholder='E.g. 6,000,000.00' value="<?php print(set_value("program_amount")); ?>">
+                                <input ng-model="program_amount" type='text' name='program_amount' placeholder='E.g. 6,000,000.00' value="<?php print(set_value("program_amount")); ?>">
                             </td>
                             <td class="span3" >
                                 <div class="error-msg">
@@ -136,10 +135,10 @@
                         <tr>
                             <td>
                                 <b>Objective of Program</b>
-                                <span> *</span>
+                                <span class="asterik"> *</span>
                             </td>
                             <td>
-                                <textarea name='program_objective' placeholder="Objective of Program" ><?php print(set_value("program_objective")); ?></textarea>
+                                <textarea ng-model="program_objective" name='program_objective' placeholder="Objective of Program" ><?php print(set_value("program_objective")); ?></textarea>
                             </td>
                             <td class="span3" >
                                 <div class="error-msg">
@@ -148,12 +147,13 @@
                             </td>
                         </tr>                        
                         <tr>
-                            <td>
-                                
+                            <td>                                
                             </td>
                             <td>
-                                <!-- <button class="btn btn-success" id="submit_create_button">Submit&nbsp;<i class="icon-arrow-right icon-white"></i></button> -->
-                                <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success span2" data-toggle="modal" onclick="">Next <i class="icon-arrow-right icon-white"></i></a>
+                                <a href="#myModal" role="button" class="btn btn-success input-block-level" data-toggle="modal" style="margin-top:10px;">
+                                    Next 
+                                    <i class="m-icon-swapright m-icon-white my-icon pull-right"></i>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -165,14 +165,17 @@
                 <h3 id="myModalLabel">Confirm Information Provided</h3>
               </div>
               <div class="modal-body">
-                    <table id="req_form">
+                    <div class="alert alert-info">
+                        <i class="icon-info"></i> Please Verify the data provided below
+                    </div>
+                    <table id="req_form" class="table table-condensed table-bordered">
                         <tbody>                            
                             <tr>
-                                <td>
+                                <td class="span3">
                                     <b>Title of Program</b>
                                 </td>
                                 <td>
-                                   <span id="program-title"></span>
+                                   <span>{{program_title}}</span>
                                 </td>
 
                             </tr>
@@ -181,7 +184,7 @@
                                     <b>Program Code</b>
                                 </td>
                                 <td>
-                                    <span id="program-code"></span>
+                                    <span>{{program_code}}</span>
                                 </td>
 
                             </tr>
@@ -191,7 +194,7 @@
                                     <b>Commencement Date</b>
                                 </td>
                                 <td>
-                                    <span id="start-date"></span>
+                                    <span>{{start_date}}</span>
                                 </td>
 
                             </tr>
@@ -200,7 +203,7 @@
                                     <b>End Date</b>
                                 </td>
                                 <td>
-                                    <span id="end-"></span>
+                                    <span>{{end_date}}</span>
                                 </td>
 
                             </tr>
@@ -209,7 +212,7 @@
                                     <b>Currency</b>
                                 </td>
                                 <td>
-                                   <span id="currency"></span>
+                                   <span>{{program_currency}}</span>
                                 </td>
 
                             </tr>
@@ -218,7 +221,7 @@
                                     <b>Program Amount</b>
                                 </td>
                                 <td>
-                                    <span id="amount"></span>
+                                    <span>{{program_amount}}</span>
                                 </td>
 
                             </tr>
@@ -227,7 +230,7 @@
                                     <b>Objective of Program</b>
                                 </td>
                                 <td>
-                                    <span id="objective"></span>
+                                    <span>{{program_objective}}</span>
                                 </td>
 
                             </tr>

@@ -68,11 +68,11 @@
                                 <tr>
                                     <td>
                                         <b>Sub-component title</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $sub_component_title; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -80,11 +80,11 @@
                                 <tr>
                                     <td>
                                         <b>Component code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $component_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -92,11 +92,11 @@
                                 <tr>
                                     <td>
                                         <b>Sub-component code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $sub_component_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -104,11 +104,11 @@
                                 <tr>
                                     <td>
                                         <b>Sub-component description</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $sub_component_description; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -116,11 +116,11 @@
                                 <tr>
                                     <td>
                                         <b>Donor cost</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $donor_cost; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -128,11 +128,11 @@
                                 <tr>
                                     <td>
                                         <b>Local cost</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $local_cost; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>

@@ -7,8 +7,6 @@ class Payment_certificate_model extends CI_Model {
 		$this->load->database();
 	}
         
-        
-
 public function get_contract($contract_code) 
     {
 
@@ -19,6 +17,16 @@ public function get_contract($contract_code)
 public function get_contract_type_details($type, $contract_code)
 {
     $query = $this->db->get_where($type , array('contract_code' => $contract_code));
+    return $query->result_array();
+}
+
+public function get_payment_certificates(){
+    $query = $this->db->get('payment_certificate');
+    return $query->result_array();
+}
+
+public function get_payment_certificates2($program_code){
+    $query = $this->db->get_where('payment_certificate', array('program_code' => $program_code));
     return $query->result_array();
 }
     

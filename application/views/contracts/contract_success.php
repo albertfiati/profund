@@ -42,11 +42,11 @@
                                 <tr>
                                     <td>
                                         <b>Contract title</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $contract_title; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -54,11 +54,11 @@
                                 <tr>
                                     <td>
                                         <b>Contract code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $contract_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -66,11 +66,11 @@
                                 <tr>
                                     <td>
                                         <b>Sub-component code</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $sub_component_code; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -78,11 +78,11 @@
                                 <tr>
                                     <td>
                                         <b>Procurement type</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $proc_type; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -90,11 +90,11 @@
                                 <tr>
                                     <td>
                                         <b>Status</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $status; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>
@@ -102,11 +102,11 @@
                                 <tr>
                                     <td>
                                         <b>Date of no objection</b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
                                     <td>
                                         <b><?php echo $date_of_no_objection; ?></b>
-                                        <span> *</span>
+                                        <span class="asterik"> *</span>
                                     </td>
 
                                 </tr>

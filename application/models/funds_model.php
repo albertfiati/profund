@@ -24,6 +24,19 @@ public function get_funds($component_code)
 	
 }
 
+public function get_program_funds($program_code){
+    $query = $this->db->get_where('funds', array("program_code" => $program_code));
+
+    if($query -> num_rows() >= 1)
+           {
+             return $query->result_array();
+           }
+           else
+           {
+             return false;
+           }
+}
+
 
 //
 //private function checkComponentAmount($component_code)

@@ -5,6 +5,9 @@ class Contracts extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('contracts_model');
+        $this->load->model('sub_components_model');
+        $this->load->model('components_model');
+        $this->load->model('programs_model');
                 $this->load->library('session');
 	}
 
@@ -14,6 +17,8 @@ class Contracts extends CI_Controller {
                     
            
 }
+
+
 
 
 

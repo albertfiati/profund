@@ -22,10 +22,10 @@ public function get_single_program($program_code)
 	
 }
 
-public function get_program($idp) 
+public function get_program($program_code) 
     {
 
-        $query = $this->db->get_where('programs', array('program_code' => $idp));
+        $query = $this->db->get_where('programs', array('program_code' => $program_code));
         return $query->row_array();
     }
     

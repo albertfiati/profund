@@ -23,18 +23,11 @@
                         </div>
                     </div>
                 </div> 
-               <!--  <div>
-                    <h5>Programme Objective</h5>
-                    <?php echo $program_details['program_objective'] ?>
-                </div> -->
             </div>
             
             <div class="content">
                 <ul class="nav nav-tabs" id="myTab">
-                    <li class="active"><a href="#program-contents">Program Components</a></li>
-                   <!--  <li><a href="#profile">Profile</a></li>
-                    <li><a href="#messages">Messages</a></li>
-                    <li><a href="#settings">Settings</a></li> -->
+                    <li class="active"><a href="#program-contents">Program Components</a></li>                   
                 </ul>
 
                 <div class="tab-content">
