@@ -95,9 +95,10 @@ $route['validate_contract_code']       = 'payment_certificate/validate_contract_
 $route['validate_contract']       = 'payment_certificate/validate_contract';
 $route['create_funders']          = 'payment_certificate/create_funders';
 
-$route['validate_contract_code_req'] = 'payment_request/validate_contract_code';
-$route['validate_contract_req']       = 'payment_request/validate_contract';
-$route['new_transaction_req']            = 'payment_request/new_transaction';
+$route['validate_contract_code_req'] = 'payment_request/validate_contract_code_req';
+$route['validate_contract_req']       = 'payment_request/validate_contract_req';
+$route['new_transaction_req']            = 'payment_request/new_transaction_req';
+$route['create_payment_request'] = 'payment_request/create_payment_request';
 
 $route['validate_contract_code_op'] = 'payment_request_for_op/validate_contract_code';
 $route['validate_contract_op']       = 'payment_request_for_op/validate_contract';

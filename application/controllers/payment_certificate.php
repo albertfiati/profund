@@ -85,6 +85,8 @@ class Payment_certificate extends CI_Controller {
         $this->session->set_userdata('contract_title', $contract['contract_title']);
         $this->session->set_userdata('contractor_code', $contract['contractor_code']);
 
+        $this->session->set_userdata('implementing_agency', $component['implementing_agency']);
+
         if ( count( $contract ) > 0 ) {
             // yup, found some contract
             redirect('new_transaction');
@@ -133,24 +135,21 @@ class Payment_certificate extends CI_Controller {
       {
  
         $session_data = $this->session->userdata('logged_in');
-        $data = $this->payment_certificate_model->set_payment_certificate();
-
-        $agency = '';
-
         $data['username'] = $session_data['username'];
         $data['title'] = 'payment_certificate';
 
+        $form_data = $this->payment_certificate_model->set_payment_certificate();
+
+        $data['msg'] = 'Payment certificate successfully created!';
+
+        $this->load->view('includes/header', $data);
+        $this->load->view('transactions/success', $data );
+
+        $this->load->view('includes/footer');
+        
+
+   
        
-
-        
-
-        
-        //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
-
-
-            $this->load->view('includes/header', $data);
-            //$this->load->view('transactions/donor_funds_pc', $data);
-            $this->load->view('includes/footer');
 
      } else {
             //If no session, redirect to login page

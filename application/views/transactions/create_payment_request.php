@@ -90,7 +90,7 @@
                 </ul>
             </div>
 
-            <?php echo form_open('create_payment_certificate') ?>
+            <?php echo form_open('create_payment_request') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>

@@ -48,7 +48,7 @@ public function set_contract()
         
 }
 
-public function set_payment_certificate()
+public function set_payment_request_for_goods_and_services()
 {
     $this->load->helper('url');    
 
@@ -91,7 +91,7 @@ public function set_payment_certificate()
     );          
 
     
-    $this->db->insert('payment_certificate', $data);
+    $this->db->insert('payment_request_for_goods_and_services', $data);
         return $data;
         
 }

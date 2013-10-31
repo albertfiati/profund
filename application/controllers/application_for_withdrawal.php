@@ -61,8 +61,10 @@ class Application_for_withdrawal extends CI_Controller {
 
     public function validate_payment_certificate() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
+        $payment_certificate_code = $this->input->post('payment_certificate_code');
+        $payment_certificate = $this->payment_certificate_model->get_payment_certificate($payment_certificate_code);
 
-        $contract_code = $_REQUEST[ 'contract_code' ];
+        $contract_code = $payment_certificate['contract_code'];
         $contract      = $this->contracts_model->get_contract( $contract_code );
 
         $this->session->set_userdata('component_title', '');

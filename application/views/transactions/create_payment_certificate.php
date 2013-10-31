@@ -99,15 +99,14 @@
                     <table id="req_form">
                         <tbody>
                             <tr>
-<<<<<<< HEAD
+
                                 <td colspan="3">
                                     Fields marked with the <span>*</span> symbol are required
                                 </td>
                             </tr>
                 
                             
-                            
-=======
+
                                 <td>
                                     <b>Sub-component code</b>
                                     <span class="asterik"> *</span>
@@ -116,8 +115,7 @@
                                     <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             
                                 </td>
                                 </tr>                            
-                            <tr>
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
+
                                 <td>
                                     <b>Date Received</b>
                                     <span class="asterik"> *</span>
@@ -177,9 +175,7 @@
                                     </div>
                                 </td>
                             </tr>                            
-<<<<<<< HEAD
-                                 
-=======
+
                             <tr>
                                 <td>
                                     <b>Contract number</b>
@@ -222,7 +218,7 @@
                                     </div>
                                 </td>
                             </tr>                            
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
+
                             <tr>
                                 <td>
                                     <b>Location</b>
@@ -291,9 +287,7 @@
                                     </div>
                                 </td>
                             </tr>                            
-<<<<<<< HEAD
-                                                     
-=======
+
                             <tr>                     
                                 <td>
                                     <b>Reference to Works Completed (as defined in the contract)</b>
@@ -308,7 +302,7 @@
                                     </div>
                                 </td>
                             </tr>                            
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
+
                             <tr>                     
                                 <td>
                                     <b>Gross value of work done (In Txn CCY)</b>
@@ -462,13 +456,13 @@
 
                             <tr>                     
                                 <td>
-<<<<<<< HEAD
+
                                     <b>Make payment directly to: </b>
                                     <span> *</span>
-=======
+
                                     <b>Amount payable by donors</b>
                                     <span class="asterik"> *</span>
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
+
                                 </td>
                                 <td>
                                     <input type='text' name='make_direct_payment_to' placeholder="">
@@ -481,7 +475,7 @@
                             </tr>                            
                             <tr>                     
                                 <td>
-<<<<<<< HEAD
+
                                     <b>Payment method</b>
                                     <span> *</span>
                                 </td>
@@ -499,117 +493,16 @@
                                     </div>
                                 </td>
                             </tr>                            
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <!-- <button class="btn btn-success" id="submit_button">&nbsp;<i class="icon-arrow-right icon-white"></i></button> -->
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
-                                    </td>
-                                </tr>
+                 
                             </tbody>
                         </table>
                     </div>
-                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="myModalLabel">Confirm Information Provided</h3>
-                        </div>
-                        <div class="modal-body">
 
-                         <tr>                     
-                                <td>
-                                    <b>Withholding tax</b>
-                                    <span> *</span>
-=======
-                                    <b>Amount payable by local sources</b>
-                                    <span class="asterik"> *</span>
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
-                                </td>
-                                <td>
-                                    <input type='text' name='withholding_tax' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("withholding_tax")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-<<<<<<< HEAD
-                                    <b>Asroc dues</b>
-                                    <span> *</span>
-=======
-                                    <b>Make payment directly to: </b>
-                                    <span class="asterik"> *</span>
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
-                                </td>
-                                <td>
-                                    <input type='text' name='asroc_dues' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("asroc_dues")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-<<<<<<< HEAD
-                                    <b>Other deductions</b>
-                                    <span> *</span>
-=======
-                                    <b>Payment method</b>
-                                    <span class="asterik"> *</span>
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
-                                </td>
-                                <td>
-                                    <input type='text' name='other_deductions' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("other_deductions")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Net amount payable</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-<<<<<<< HEAD
-                                    <input type='text' name='net_amount_payable' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("net_amount_payable")); ?>
-                                    </div>
-                                </td>
-                            </tr>   
-=======
-                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="m-icon-swapright m-icon-white my-icon pull-right"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="myModalLabel">Confirm Information Provided</h3>
-                        </div>
-                        <div class="modal-body">
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd
-                                
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button class="btn btn-primary">Submit</button>
+              </div>
+                    
             </form>
         </div>
     </div>

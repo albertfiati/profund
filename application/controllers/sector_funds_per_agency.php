@@ -106,6 +106,7 @@ public function create_sector_funds_per_agency() {
 
         $program_code = $this->input->post('program_code');
 
+        $program_code = 'P012009';
         $year = $this->input->post('year');
 
         $program = $this->programs_model->get_program($program_code);

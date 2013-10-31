@@ -18,7 +18,7 @@ class Payment_request extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
 
             $data['username'] = $session_data['username'];
-            $data['title'] = 'Payment_certificate';
+            $data['title'] = 'Payment request';
 
             $this->validate_contract_code_req();
 
@@ -28,7 +28,7 @@ class Payment_request extends CI_Controller {
         }
         }
 
-    public function validate_contract_code() {
+    public function validate_contract_code_req() {
 
         if($this->session->userdata('logged_in'))
       {
@@ -55,7 +55,7 @@ class Payment_request extends CI_Controller {
 
 
 
-    public function validate_contract() {
+    public function validate_contract_req() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
 
         $contract_code = $_REQUEST[ 'contract_code' ];
@@ -93,7 +93,7 @@ class Payment_request extends CI_Controller {
         }
     }
 
-    public function new_transaction() {
+    public function new_transaction_req() {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 //        $data['success_message'] = $session_data['success_message'];
@@ -133,12 +133,12 @@ class Payment_request extends CI_Controller {
       {
  
         $session_data = $this->session->userdata('logged_in');
-        $data = $this->payment_request_model->set_payment_request();
+        $data = $this->payment_request_model->set_payment_request_for_goods_and_services();
 
         $agency = '';
 
         $data['username'] = $session_data['username'];
-        $data['title'] = 'payment_certificate';
+        $data['title'] = 'Payment request';
 
        
 
