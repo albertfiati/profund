@@ -18,9 +18,9 @@ class Payment_request_for_op extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
 
             $data['username'] = $session_data['username'];
-            $data['title'] = 'Payment_certificate';
+            $data['title'] = 'Payment request for operations';
 
-            $this->validate_contract_code_req();
+            $this->validate_contract_code_op();
 
         } else {
             //If no session, redirect to login page
@@ -28,7 +28,7 @@ class Payment_request_for_op extends CI_Controller {
         }
         }
 
-    public function validate_contract_code() {
+    public function validate_contract_code_op() {
 
         if($this->session->userdata('logged_in'))
       {
@@ -55,7 +55,7 @@ class Payment_request_for_op extends CI_Controller {
 
 
 
-    public function validate_contract() {
+    public function validate_contract_op() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
 
         $contract_code = $_REQUEST[ 'contract_code' ];
@@ -89,11 +89,11 @@ class Payment_request_for_op extends CI_Controller {
             // yup, found some contract
             redirect('new_transaction_op');
         } else {
-            $this->validate_contract_code();
+            $this->validate_contract_code_op();
         }
     }
 
-    public function new_transaction() {
+    public function new_transaction_op() {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 //        $data['success_message'] = $session_data['success_message'];
@@ -127,25 +127,25 @@ class Payment_request_for_op extends CI_Controller {
         }
     }
 
-    public function create_request_for_op(){
+    public function create_payment_request_op(){
 
       if($this->session->userdata('logged_in'))
       {
  
         $session_data = $this->session->userdata('logged_in');
-        $data = $this->payment_request_for_op_model->set_request_for_op();
+        $feed = $this->payment_request_for_op_model->set_payment_request_for_op();
 
-        $agency = '';
+ 
 
         $data['username'] = $session_data['username'];
         $data['title'] = 'Payment request for operating expenses';
 
         //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
+        $data['msg'] = 'Payment request for operations successfully created!';
 
-
-            $this->load->view('includes/header', $data);
-            //$this->load->view('transactions/donor_funds_pc', $data);
-            $this->load->view('includes/footer');
+        $this->load->view('includes/header', $data);
+        $this->load->view('transactions/success', $data );
+        $this->load->view('includes/footer');
 
      } else {
             //If no session, redirect to login page

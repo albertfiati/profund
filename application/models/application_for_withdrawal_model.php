@@ -57,50 +57,37 @@ public function set_contract()
         
 }
 
-public function set_payment_request_for_op()
+public function set_application_for_withdrawal()
 {
     $this->load->helper('url');    
 
-     $fluctuation_in_amount_payable = $this->input->post('fluctuation_in_amount_payable');
-        $liquidation_damages = $this->input->post('liquidaion_damages');
-        $deduction_for_mobilisation_advance = $this->input->post('deduction_for_mobilisation_advance');
-        $retention = $this->input->post('retention');
-        $withholding_tax = $this->input->post('withholding_tax');
-        $asroc_dues = $this->input->post('asroc_dues');
-
-        $deductions = $fluctuation_in_amount_payable + $liquidation_damages + $deduction_for_mobilisation_advance + $retention
-                                   + $withholding_tax + $withholding_tax + $asroc_dues;
-
-        $gross_value_of_work_done = $this->input->post('gross_value_of_work_done');
-        $net_amount_payable = $gross_value_of_work_done - $deductions;
-
+    
     $data = array(
- 
-                'date_received' => $this->input->post('date_received'), 
-                'stage' => $this->input->post('stage'), 
-                'asset_account' => $this->input->post('asset_account'),
-                'location' => $this->input->post('location'),
-                'transaction_currency' => $this->input->post('transaction_currency'),             
-                'agency' => 'agency',
-                'rate_to_usd' => $this->input->post('rate_to_usd'),
-                'gross_value_of_work_done' => $this->input->post('gross_value_of_work_done'),
-                'fluctuation_in_amount_payable' => $this->input->post('fluctuation_in_amount_payable'),
-                'liquidation_damages' => $this->input->post('liquidaion_damages'),
-                'deduction_for_mobilisation_advance' => $this->input->post('deduction_for_mobilisation_advance'),
-                'retention' => $this->input->post('retention'),
-                'withholding_tax' => $this->input->post('withholding_tax'),
-                'asroc_dues' => $this->input->post('asroc_dues'),
-                'net_amount_payable' => $net_amount_payable,
-                'amount_payable_by_donors' => $this->input->post('amount_payable_to_donors'),
-                'make_payment_direct_to' => $this->input->post('amake_direct_payment_to'),
-                'payment_method' => $this->input->post('payment_method'),
-                'contractor_code' => 'contractor_code',
-                'debit_account' => 'debit_account',
-                'credit_account' => 'credit_account'
+                
+                'application_number' => $this->input->post('application_number'), 
+                'certificate_number' => $this->input->post('certificate_number'), 
+                'date_of_memo' => $this->input->post('date_of_memo'), 
+                'pv_date' => $this->input->post('pv_date'), 
+                'pv_number' => $this->input->post('pv_number'), 
+                'program_code' => $this->input->post('program_code'),
+                'contract_code' => $this->input->post('contract_code'),
+                
+                'fund_donor' => $this->input->post('fund_donor'),
+                'agency' => $this->input->post('agency'),
+                'net_amount_payable' => $this->input->post('net_amount_payable'),
+                
+                'amount_payable_by_local_sources' => $this->input->post('amount_payable_by_local_sources'),
+                //'make_payment_direct_to' => $this->input->post('amake_direct_payment_to'),
+                'fund_donor_type' => $this->input->post('fund_donor_type'),
+                'amount_payable_by_donor' => $this->input->post('amount_payable_to_donor')
+               // 'payment_method' => $this->input->post('payment_method'),
+                //'contractor_code' => 'contractor_code',
+               // 'debit_account' => 'debit_account',
+                //'credit_account' => 'credit_account'
     );          
 
     
-    $this->db->insert('payment_request_for_op', $data);
+    $this->db->insert('application_for_redrawal', $data);
         return $data;
         
 }

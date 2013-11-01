@@ -23,7 +23,7 @@
         <div class="span8 pull-right" id="user_menu" style="margin-left: 200px;">
 
 
-            <?php echo form_open('create_bank_charges') ?>
+            <?php echo form_open('bank_charge') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>

@@ -23,7 +23,7 @@
         <div class="span8 pull-right" id="user_menu" style="margin-left: 200px;">
 
 
-            <?php echo form_open('set_application_for_special_transfer') ?>
+            <?php echo form_open('application_for_transfer') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>

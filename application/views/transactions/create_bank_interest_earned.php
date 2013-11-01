@@ -23,7 +23,7 @@
         <div class="span8 pull-right" id="user_menu" style="margin-left: 200px;">
 
 
-            <?php echo form_open('set_exchange_gain_loss') ?>
+            <?php echo form_open('bank_interests_earned') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>
@@ -39,7 +39,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_received' placeholder="">
+                                    <input type='text' name='effective_date' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -48,7 +48,6 @@
                                 </td>
                             </tr>
 
-                          
 
                             <tr>
                                 <td>
@@ -56,21 +55,14 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='transaction_currency' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("location")); ?>
+                                        <?php print(form_error("date_received")); ?>
                                     </div>
                                 </td>
+                                
                             </tr> 
 
                             <tr>                     
@@ -79,7 +71,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='agency' placeholder="">
+                                    <input type='text' name='rate_to_cedi' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -109,52 +101,45 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='amount_earned' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
                                         <?php print(form_error("invoice_total_amount")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
-                            
+                            </tr>   
+
                             <tr>                     
                                 <td>
                                     <b>Interest account</b>
                                     <span> *</span>
                                 </td>
-                              
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='interest_account' placeholder="">
                                 </td>
-                            </tr> 
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("invoice_total_amount")); ?>
+                                    </div>
+                                </td>
+                            </tr>   
 
                             <tr>                     
                                 <td>
-                                    <b>Account (Select type)</b>
+                                    <b>Interest account</b>
                                     <span> *</span>
                                 </td>
-                              
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='interest_account' placeholder="">
                                 </td>
-                            </tr> 
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("invoice_total_amount")); ?>
+                                    </div>
+                                </td>
+                            </tr>                        
+                            
 
                             <tr>                     
                                 <td>
@@ -163,15 +148,12 @@
                                 </td>
                               
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='programme_id' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("date_received")); ?>
+                                    </div>
                                 </td>
                             </tr> 
 
@@ -181,21 +163,14 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='component_code' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("location")); ?>
+                                        <?php print(form_error("date_received")); ?>
                                     </div>
                                 </td>
+                                
                             </tr> 
 
                             <tr>
@@ -204,34 +179,24 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='donor_account_name' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("location")); ?>
+                                        <?php print(form_error("date_received")); ?>
                                     </div>
                                 </td>
+                               
                             </tr> 
 
-                           
-  
-
-
+     
                             <tr>                     
                                 <td>
                                     <b>Gain/Loss account</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='transaction_currency' placeholder="">
+                                    <input type='text' name='gain_loss_account' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -239,17 +204,14 @@
                                     </div>
                                 </td>
                             </tr>                            
-                                                      
-                                                     
-                            
-                           
+                      
                             <tr>                     
                                 <td>
                                     <b>Remarks</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='withholding_tax' placeholder="">
+                                    <input type='text' name='remarks' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">

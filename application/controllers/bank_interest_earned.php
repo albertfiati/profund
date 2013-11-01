@@ -30,9 +30,28 @@ class Bank_interest_earned extends CI_Controller {
           }
         }
 
+      public function bank_interests_earned(){
+
+   
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create application for special transfer';
+
+            $feed = $this->bank_interest_earned_model->set_bank_interest_earned();
+
+            $data['msg'] = 'Bank interests earned successfully created!';
+
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/success', $data );
+            $this->load->view('includes/footer');
 
 
 
+  }
 
     public function create_bank_interest_earned(){
 

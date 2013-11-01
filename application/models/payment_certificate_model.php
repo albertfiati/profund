@@ -25,6 +25,11 @@ public function get_payment_certificates(){
     return $query->result_array();
 }
 
+public function get_payment_certificate($payment_certificate_code){
+    $query = $this->db->get('payment_certificate');
+    return $query->row_array();
+}
+
 public function get_payment_certificates2($program_code){
     $query = $this->db->get_where('payment_certificate', array('program_code' => $program_code));
     return $query->result_array();

@@ -146,11 +146,11 @@ class Payment_request extends CI_Controller {
 
         
         //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
+        $data['msg'] = 'Payment request for goods and services successfully created!';
 
-
-            $this->load->view('includes/header', $data);
-            //$this->load->view('transactions/donor_funds_pc', $data);
-            $this->load->view('includes/footer');
+        $this->load->view('includes/header', $data);
+        $this->load->view('transactions/success', $data );
+        $this->load->view('includes/footer');
 
      } else {
             //If no session, redirect to login page

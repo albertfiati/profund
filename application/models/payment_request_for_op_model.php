@@ -67,31 +67,43 @@ public function set_payment_request_for_op()
 
     $data = array(
  
-                'date_received' => $this->input->post('date_received'), 
-                'stage' => $this->input->post('stage'), 
-                'asset_account' => $this->input->post('asset_account'),
-                'location' => $this->input->post('location'),
+                'date_of_memo' => $this->input->post('date_of_memo'), 
+                'PV_date' => $this->input->post('PV_date'), 
+                'pv_number' => $this->input->post('pv_number'), 
+                'pv_number' => $this->input->post('pv_number'), 
+                'reference_to_approved_memo' => $this->input->post('reference_to_approved_memo'),
+                'contract_code' => $this->input->post('contract_code'),
+                'program_code' => $this->input->post('program_code'),
+                'fund_donor' => $this->input->post('fund_donor'),
+                'fund_donor_type' => $this->input->post('fund_donor_type'),
+                'contractor_account' => $this->input->post('contractor_account'),
                 'transaction_currency' => $this->input->post('transaction_currency'),             
                 'agency' => 'agency',
+                'rate_to_cedi' => $this->input->post('rate_to_cedi'),
                 'rate_to_usd' => $this->input->post('rate_to_usd'),
-                'gross_value_of_work_done' => $this->input->post('gross_value_of_work_done'),
-                'fluctuation_in_amount_payable' => $this->input->post('fluctuation_in_amount_payable'),
-                'liquidation_damages' => $this->input->post('liquidaion_damages'),
-                'deduction_for_mobilisation_advance' => $this->input->post('deduction_for_mobilisation_advance'),
+                'location' => $this->input->post('location'),
                 'retention' => $this->input->post('retention'),
-                'withholding_tax' => $this->input->post('withholding_tax'),
-                'asroc_dues' => $this->input->post('asroc_dues'),
+                'invoice_total_amount' => $this->input->post('invoice_total_amount'),
+                
+                'VAT' => $this->input->post('VAT'),
+
+                
+                //'withholding_tax' => $this->input->post('withholding_tax'),
+
                 'net_amount_payable' => $net_amount_payable,
+            
                 'amount_payable_by_donors' => $this->input->post('amount_payable_to_donors'),
-                'make_payment_direct_to' => $this->input->post('amake_direct_payment_to'),
+                'amount_payable_by_local_sources' => $this->input->post('amount_payable_by_local_sources'),
+                'gov_staff_involved' => $this->input->post('gov_staff_involved'),
+                //'make_payment_direct_to' => $this->input->post('amake_direct_payment_to'),
                 'payment_method' => $this->input->post('payment_method'),
-                'contractor_code' => 'contractor_code',
+                'beneficiary' => $this->input->post('beneficiary'),
                 'debit_account' => 'debit_account',
                 'credit_account' => 'credit_account'
     );          
 
     
-    $this->db->insert('payment_request_for_op', $data);
+    $this->db->insert('payment_request_for_operating_expenses', $data);
         return $data;
         
 }

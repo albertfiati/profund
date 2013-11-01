@@ -31,7 +31,26 @@ class Bank_charges extends CI_Controller {
         }
 
 
+    public function bank_charge(){
 
+   
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create bank charges';
+
+            $feed = $this->bank_charges_model->set_bank_charges();
+
+            $data['msg'] = 'Bank charges successfully created!';
+
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/success', $data );
+            $this->load->view('includes/footer');
+
+  }
 
 
     public function create_bank_charges(){

@@ -9,6 +9,7 @@ class Application_for_withdrawal extends CI_Controller {
         $this->load->model('sub_components_model');
         $this->load->model('components_model');
         $this->load->model('programs_model');
+        $this->load->model('payment_certificate_model');
         $this->load->library('session');
     }
 
@@ -95,7 +96,7 @@ class Application_for_withdrawal extends CI_Controller {
             // yup, found some contract
             redirect('new_transaction_with');
         } else {
-            $this->validate_contract_code();
+            $this->validate_certificate_code();
         }
     }
 
@@ -133,25 +134,27 @@ class Application_for_withdrawal extends CI_Controller {
         }
     }
 
-    public function create_request_for_op(){
+    public function create_application_for_with(){
 
       if($this->session->userdata('logged_in'))
       {
  
         $session_data = $this->session->userdata('logged_in');
-        $data = $this->payment_request_for_op_model->set_request_for_op();
+        $feed = $this->application_for_withdrawal_model->set_application_for_withdrawal();
 
         $agency = '';
 
         $data['username'] = $session_data['username'];
-        $data['title'] = 'Payment request for operating expenses';
+        $data['title'] = 'Application_for_withdrawal';
 
         //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
 
 
-            $this->load->view('includes/header', $data);
-            //$this->load->view('transactions/donor_funds_pc', $data);
-            $this->load->view('includes/footer');
+        $data['msg'] = 'Application for withdrawal successfully created!';
+
+        $this->load->view('includes/header', $data);
+        $this->load->view('transactions/success', $data );
+        $this->load->view('includes/footer');
 
      } else {
             //If no session, redirect to login page

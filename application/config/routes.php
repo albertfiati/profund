@@ -100,19 +100,34 @@ $route['validate_contract_req']       = 'payment_request/validate_contract_req';
 $route['new_transaction_req']            = 'payment_request/new_transaction_req';
 $route['create_payment_request'] = 'payment_request/create_payment_request';
 
-$route['validate_contract_code_op'] = 'payment_request_for_op/validate_contract_code';
-$route['validate_contract_op']       = 'payment_request_for_op/validate_contract';
-$route['new_transaction_op']            = 'payment_request_for_op/new_transaction';
+$route['validate_contract_code_op'] = 'payment_request_for_op/validate_contract_code_op';
+$route['validate_contract_op']       = 'payment_request_for_op/validate_contract_op';
+$route['new_transaction_op']            = 'payment_request_for_op/new_transaction_op';
+$route['create_payment_request_op'] = 'payment_request_for_op/create_payment_request_op';
 
 $route['validate_payment_certificate_code'] = 'application_for_withdrawal/validate_payment_certificate_code';
 $route['validate_payment_certificate']       = 'application_for_withdrawal/validate_payment_certificate';
 $route['new_transaction_with']            = 'application_for_withdrawal/new_transaction_with';
+$route['create_application_for_with'] = 'application_for_withdrawal/create_application_for_with';
 
+
+$route['application_for_transfer'] = 'application_for_special_transfer/application_for_transfer';
 $route['create_application_for_special_transfer'] = 'application_for_special_transfer/create_application_for_special_transfer';
+
+$route['bank_interest_earned'] = 'bank_interest_earned/exchange_gain_or_loss';
 $route['create_bank_interest_earned'] = 'bank_interest_earned/create_bank_interest_earned';
+
+$route['exchange_gain_or_loss'] = 'exchange_gain_loss/exchange_gain_or_loss';
 $route['create_exchange_gain_loss'] = 'exchange_gain_loss/create_exchange_gain_loss';
+
+$route['create_bank_interest_earned'] = 'bank_interest_earned/create_bank_interest_earned';
+$route['bank_interests_earned'] = 'bank_interest_earned/bank_interests_earned';
+
 $route['create_bank_charges'] = 'bank_charges/create_bank_charges';
+$route['bank_charge'] = 'bank_charges/bank_charge';
+
 $route['create_cash_transfer'] = 'cash_transfer/create_cash_transfer';
+$route['cash_transfer'] = 'bank_charges/bank_charge';
 
 $route['validate_contract_pay_inst_bank'] = 'payment_instruction_to_bank/validate_contract_code';
 $route['validate_cont_pay_inst_bank']       = 'payment_instruction_to_bank/validate_contract';

@@ -13,12 +13,14 @@ class Exchange_gain_loss extends CI_Controller {
     }
 
 
-	public function index() {
-             if ($this->session->userdata('logged_in')) {
+	
+    public function index() {
+            
+            if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
 
             $data['username'] = $session_data['username'];
-            $data['title'] = 'Exchange gain/loss';
+            $data['title'] = 'Exchange gain or loss';
 
             $this->create_exchange_gain_loss();
 
@@ -28,12 +30,29 @@ class Exchange_gain_loss extends CI_Controller {
             //If no session, redirect to login page
             redirect('login', 'refresh');
           }
-        }
+    }
 
+    public function exchange_gain_or_loss(){
 
+   
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
 
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create exchange gain or loss';
 
+            $feed = $this->exchange_gain_loss_model->set_exchange_gain_loss();
 
+            $data['msg'] = 'Exchange gain or loss successfully created!';
+
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/success', $data );
+            $this->load->view('includes/footer');
+    }
+
+    
     public function create_exchange_gain_loss(){
 
       if($this->session->userdata('logged_in'))
@@ -42,15 +61,15 @@ class Exchange_gain_loss extends CI_Controller {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 
+        //$feed = $this->exchange_gain_loss_model->set_exchange_gain_loss();
+
         
             $this->load->helper('form');
             $this->load->library('form_validation');
-            
-            $data['title'] = 'Valideate contract code';
-            
+            $data['title'] = 'Create exchange gain or loss';
 
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/create_exchange_gain_loss');
+            $this->load->view('transactions/create_exchange_gain_loss', $data );
             $this->load->view('includes/footer');
 
      } else {
@@ -58,6 +77,4 @@ class Exchange_gain_loss extends CI_Controller {
             redirect('login', 'refresh');
         }
     }
-
-  
 }                                  

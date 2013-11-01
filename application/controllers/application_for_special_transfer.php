@@ -13,8 +13,9 @@ class Application_for_special_transfer extends CI_Controller {
     }
 
 
-	public function index() {
-             if ($this->session->userdata('logged_in')) {
+public function index() {
+            
+            if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
 
             $data['username'] = $session_data['username'];
@@ -30,7 +31,28 @@ class Application_for_special_transfer extends CI_Controller {
           }
         }
 
+  public function application_for_transfer(){
 
+   
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create application for special transfer';
+
+            $feed = $this->application_for_special_transfer_model->set_application_for_special_transfer();
+
+            $data['msg'] = 'Application for special transfer successfully created!';
+
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/success', $data );
+            $this->load->view('includes/footer');
+
+
+
+  }
 
 
 
@@ -45,12 +67,16 @@ class Application_for_special_transfer extends CI_Controller {
         
             $this->load->helper('form');
             $this->load->library('form_validation');
+            $data['title'] = 'Create application for special transfer';
+
+            //$feed = $this->application_for_special_transfer_model->set_application_for_special_transfer();
             
-            $data['title'] = 'Valideate contract code';
+           
             
+            $data['msg'] = 'Application for withdrawal successfully created!';
 
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/create_application_for_special_transfer');
+            $this->load->view('transactions/create_application_for_special_transfer', $data );
             $this->load->view('includes/footer');
 
      } else {

@@ -90,7 +90,7 @@
                 </ul>
             </div>
 
-            <?php echo form_open('create_payment_certificate') ?>
+            <?php echo form_open('create_payment_request_op') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>
@@ -253,7 +253,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='agency' placeholder="">
+                                    <input type='text' name='rate_to_cedi' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -474,65 +474,7 @@
                                     </div>
                                 </td>
                             </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Other deductions</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='other_deductions' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("other_deductions")); ?>
-                                    </div>
-                                </td>
-                            </tr>  
-
-                            <tr>                     
-                                <td>
-                                    <b>Amount payable by donors</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='net_amount_payable' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("net_amount_payable")); ?>
-                                    </div>
-                                </td>
-                            </tr> 
-
-                            <tr>                     
-                                <td>
-                                    <b>Amount payable by local sourcess</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='net_amount_payable' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("net_amount_payable")); ?>
-                                    </div>
-                                </td>
-                            </tr> 
-
-                            <tr>                     
-                                <td>
-                                    <b>Net amount payable</b>
-                                    <span> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='net_amount_payable' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("net_amount_payable")); ?>
-                                    </div>
-                                </td>
-                            </tr>   
+                             
                                 
                         </div>
                         <div class="modal-footer">
