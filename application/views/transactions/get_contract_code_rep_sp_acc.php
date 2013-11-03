@@ -10,14 +10,14 @@
             <div class="steps">
                 <ul id="progressbar">
                     <li class="active">Validate contract code</li>
-                    <li class="active">Fill in Payment Certificate details</li>
+                    <li class="active">Fill in payment advice to replenish special account</li>
               
                 </ul>
             </div>
 
-			<?php echo form_open('validate_contract'); ?>
+			<?php echo form_open('validate_contract_pay_inst_bank'); ?>
 				<div><input name="contract_code"></div>
-				<div><input type="submit" value="Create transaction for this contract"></div>
+				<div><input type="submit" value="Create payment request for this contract"></div>
 			</form>
 
 			</div>

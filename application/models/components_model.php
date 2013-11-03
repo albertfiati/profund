@@ -6,6 +6,19 @@ class Components_model extends CI_Model {
 	{
 		$this->load->database();
 	}
+
+public function get_component($component_code)
+{
+	$query = $this->db->get_where('components', array('component_code' => $component_code));
+        return $query->row_array();
+
+}
+
+public function get_funders($component_code)
+{
+	$query = $this->db->get_where('funds', array('component_code' => $component_code));
+        return $query->result_array();
+}
         
 public function get_components($program_code)
 {
@@ -22,17 +35,6 @@ public function get_single_component($component_code)
 	
 }
 
-public function get_component($idc) 
-    {
-//        if ($idp === FALSE)
-//        {
-//            $query = $this->db->get('programs');
-//            return $query->result_array();
-//        }
-
-        $query = $this->db->get_where('components', array('component_code' => $idc));
-        return $query->row_array();
-    }
     
 public function get_sub_components($idc) 
     {

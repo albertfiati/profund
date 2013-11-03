@@ -1,7 +1,9 @@
 	</div>
 	<div class="footer">
 		<p>
-			<img src="<?php echo base_url('public/img/coa.png'); ?>" style="max-width:30px; max-height:30px;" title="Profund" alt="Profund">
+		    PROFUND &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<!--<img src="<?php echo base_url('public/img/coa.png'); ?>" style="max-width:30px; max-height:30px;" title="Profund" alt="Profund"> -->
 			Ministry of Roads and Highways &copy; 2013
 		</p>
 	</div>

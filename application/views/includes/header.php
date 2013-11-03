@@ -26,16 +26,38 @@ and open the template in the editor.
     </head>
     <body>
         <div>
+<!-- <<HEAD
+            <div class="header-top container">
+                <a href="home"><img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund"></a>
+                <div class="clearer"></div>
+            </div> 
+=======
+-->
+
             <div class="header-main">
                 <div class="header-top container">
-                    <div class="span6">
+                   <!-- <div class="span6">
                         <a href="/">
                             <img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund">
                         </a>
-                    </div>
+                    </div>-->
+                    <div class="span6">
+                       <!-- <p>
+                            <img src="<?php echo base_url('public/img/coa.png'); ?>" style="max-width:50px; max-height:50px;" title="Profund" alt="Profund">
+                            Ministry of Roads and Highways.
+ 
+                        </p> -->
+
+
+                         </div>
+                        
+                            
+
                     <div class="clearer"></div>
                 </div>
             </div>
+            <!--
+>>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd -->
             
             <div class="navbar navbar-fixed">  
                 <div class="navbar-inner" style="border-radius: 0px !important;">                       
@@ -51,9 +73,32 @@ and open the template in the editor.
                             <li class="dropdown">  
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transactions <b class="caret"></b></a>  
                                 <ul class="dropdown-menu">  
-                                    <li><a href="<?php echo base_url();?>index.php/payment_certificate">Payment  certificate</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code">Payment  certificate</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code_req">Payment  request for goods or services</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code_op">Payment  request for operating expenses</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_payment_certificate_code">Application for withdrawal</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_application_for_special_transfer">Application for special transfer</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_exchange_gain_loss">Exchange gain/loss</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_bank_interest_earned">Bank interest earned</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_bank_charges">Bank charges</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_cash_transfer">Cash transfer</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code_ad_don">Payment advice from donor</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/create_payment_advice_to_replenish_special_account">Payment advice to replenish special account</a></li>
+                                    
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_pay_inst_bank">Payment instruction to bank</a></li>
+           
+
                                 </ul>  
                             </li>  
+                            <li class="dropdown">  
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports <b class="caret"></b></a>  
+                                <ul class="dropdown-menu">  
+                                    <li><a href="<?php echo base_url();?>index.php/validate_report_form">Contractor's ledger</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_sector_funds">Sector funds, agency performance</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_sector_funds_per_agency">Sector funds, agency performance per agency</a></li>
+
+                                </ul>  
+                            </li> 
                         </ul>
 
                         <ul class="nav pull-right"> 

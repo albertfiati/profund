@@ -10,16 +10,17 @@
             <div class="steps">
                 <ul id="progressbar">
                     <li class="active">Validate contract code</li>
-                    <li class="active">Fill in Payment Certificate details</li>
+                    <li class="active">Fill in Payment advice from donor</li>
               
                 </ul>
             </div>
 
-			<?php echo form_open('validate_contract'); ?>
+			<?php echo form_open('validate_contract_ad_don'); ?>
 				<div><input name="contract_code"></div>
-				<div><input type="submit" value="Create transaction for this contract"></div>
+				<div><input type="submit" value="Create payment advice from donor"></div>
 			</form>
 
 			</div>
 		</div>
 </div>
+ 

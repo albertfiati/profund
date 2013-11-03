@@ -1,26 +1,36 @@
 <?php
-class Contracts extends CI_Controller {
+class Payment_cert extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('contracts_model');
-        $this->load->model('sub_components_model');
-        $this->load->model('components_model');
-        $this->load->model('programs_model');
                 $this->load->library('session');
 	}
 
 	public function index()
 {
-            $this->create();
+            $this->validate_contract_code();
                     
            
 }
 
-
-
-
+//	public function view($slug)
+//{
+//	$data['news_item'] = $this->news_model->get_news($slug);
+//
+//	if (empty($data['news_item']))
+//	{
+//		show_404();
+//	}
+//
+//	$data['title'] = $data['news_item']['title'];
+//
+//	$this->load->view('templates/header', $data);
+//	$this->load->view('news/view', $data);
+//	$this->load->view('templates/footer');
+//}
+//
 
 public function show()
 {
@@ -41,6 +51,14 @@ public function show()
         $data['type'] = $type;
 
 
+        
+//        $this->load->helper('url');
+       
+ 
+//	if (empty($data['programs']))
+//	{
+//		show_404();
+//	}
 
 	$data['title'] = 'Show contract';
 

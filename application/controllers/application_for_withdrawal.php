@@ -1,14 +1,15 @@
 <?php
-class Payment_certificate extends CI_Controller {
+class Application_for_withdrawal extends CI_Controller {
 
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model('payment_certificate_model');
+        $this->load->model('application_for_withdrawal_model');
         $this->load->model('contracts_model');
         $this->load->model('sub_components_model');
         $this->load->model('components_model');
         $this->load->model('programs_model');
+        $this->load->model('payment_certificate_model');
         $this->load->library('session');
     }
 
@@ -18,17 +19,21 @@ class Payment_certificate extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
 
             $data['username'] = $session_data['username'];
-            $data['title'] = 'Payment_certificate';
+            $data['title'] = 'Application for withdrawal';
 
-            $this->validate_contract_code();
+            $this->validate_payment_certificate_code();
+
+
 
         } else {
             //If no session, redirect to login page
             redirect('login', 'refresh');
-        }
+          }
         }
 
-    public function validate_contract_code() {
+
+
+    public function validate_payment_certificate_code() {
 
         if($this->session->userdata('logged_in'))
       {
@@ -40,11 +45,11 @@ class Payment_certificate extends CI_Controller {
             $this->load->helper('form');
             $this->load->library('form_validation');
             
-            $data['title'] = 'Valideate contract code';
+            $data['title'] = 'Valideate payment certificate code';
             
 
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/get_contract');
+            $this->load->view('transactions/get_payment_certificate');
             $this->load->view('includes/footer');
 
      } else {
@@ -55,10 +60,12 @@ class Payment_certificate extends CI_Controller {
 
 
 
-    public function validate_contract() {
+    public function validate_payment_certificate() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
+        $payment_certificate_code = $this->input->post('payment_certificate_code');
+        $payment_certificate = $this->payment_certificate_model->get_payment_certificate($payment_certificate_code);
 
-        $contract_code = $_REQUEST[ 'contract_code' ];
+        $contract_code = $payment_certificate['contract_code'];
         $contract      = $this->contracts_model->get_contract( $contract_code );
 
         $this->session->set_userdata('component_title', '');
@@ -85,17 +92,15 @@ class Payment_certificate extends CI_Controller {
         $this->session->set_userdata('contract_title', $contract['contract_title']);
         $this->session->set_userdata('contractor_code', $contract['contractor_code']);
 
-        $this->session->set_userdata('implementing_agency', $component['implementing_agency']);
-
         if ( count( $contract ) > 0 ) {
             // yup, found some contract
-            redirect('new_transaction');
+            redirect('new_transaction_with');
         } else {
-            $this->validate_contract_code();
+            $this->validate_certificate_code();
         }
     }
 
-    public function new_transaction() {
+    public function new_transaction_with() {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 //        $data['success_message'] = $session_data['success_message'];
@@ -103,7 +108,7 @@ class Payment_certificate extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['title'] = 'Create payment transaction';
+        $data['title'] = 'Create application for withdrawal';
         $this->form_validation->set_error_delimiters('<div style="width:470px; margin:20px;" class="alert alert-error">', '</div>');
 
         $data['username'] = $session_data['username'];
@@ -117,39 +122,39 @@ class Payment_certificate extends CI_Controller {
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/create_payment_certificate', $data );
+            $this->load->view('transactions/create_application_for_withdrawal', $data );
             $this->load->view('includes/footer');
         } else {
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/create_payment_certificate', $data);
+            $this->load->view('transactions/create_application_for_withdrawal', $data);
 
-            $data['title'] = 'Create payment certificate';
+            $data['title'] = 'Create application for withdrawal';
 
             $this->load->view('includes/footer');
         }
     }
 
-    public function create_payment_certificate(){
+    public function create_application_for_with(){
 
       if($this->session->userdata('logged_in'))
       {
  
         $session_data = $this->session->userdata('logged_in');
+        $feed = $this->application_for_withdrawal_model->set_application_for_withdrawal();
+
+        $agency = '';
+
         $data['username'] = $session_data['username'];
-        $data['title'] = 'payment_certificate';
+        $data['title'] = 'Application_for_withdrawal';
 
-        $form_data = $this->payment_certificate_model->set_payment_certificate();
+        //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
 
-        $data['msg'] = 'Payment certificate successfully created!';
+
+        $data['msg'] = 'Application for withdrawal successfully created!';
 
         $this->load->view('includes/header', $data);
         $this->load->view('transactions/success', $data );
-
         $this->load->view('includes/footer');
-        
-
-   
-       
 
      } else {
             //If no session, redirect to login page

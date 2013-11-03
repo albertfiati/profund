@@ -7,6 +7,12 @@ class Contracts_model extends CI_Model {
 		$this->load->database();
 	}
         
+public function get_contracts()
+{
+        $query = $this->db->get('contracts');
+        return $query->result_array();
+    
+}
         
 
 public function get_contract($contract_code) 

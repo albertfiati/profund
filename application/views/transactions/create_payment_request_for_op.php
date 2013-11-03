@@ -85,40 +85,25 @@
            <div class="steps">
                 <ul id="progressbar">
                     <li>Validate contract code</li>
-                    <li class="active">Fill in Payment Certificate details</li>
+                    <li class="active">Fill in Payment request for operating expenses details</li>
                
                 </ul>
             </div>
 
-            <?php echo form_open('create_payment_certificate') ?>
+            <?php echo form_open('create_payment_request_op') ?>
                 <div class="form-padding">
-                    <div class="alert alert-info my-alert">
-                        <i class="icon-info"></i>
-                        Fields marked with the <span class="asterik">*</span> symbol are required
-                    </div>
                     <table id="req_form">
                         <tbody>
                             <tr>
-
                                 <td colspan="3">
                                     Fields marked with the <span>*</span> symbol are required
                                 </td>
-                            </tr>
-                
+                            </tr>             
                             
-
+                            <tr>
                                 <td>
-                                    <b>Sub-component code</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <b><?php echo $this->session->userdata['sub_component_code']; ?></b>             
-                                </td>
-                                </tr>                            
-
-                                <td>
-                                    <b>Date Received</b>
-                                    <span class="asterik"> *</span>
+                                    <b>Date of memo</b>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='date_received' placeholder="">
@@ -129,100 +114,87 @@
                                     </div>
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>
-                                    <b>Stage</b>
-                                    <span class="asterik"> *</span>
+                                    <b>PV date</b>
+                                    <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='stage'>
-                                        <option value=''>--Select stage--</option>
-                                        <option value='final'>Final</option>
-                                        <option value='interim'>Interim</option>                                        
-                                    </select>
+                                    <input type='text' name='invoice_date' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("stage")); ?>
+                                        <?php print(form_error("date_received")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
-                            <tr>                            
+                            </tr>
+
+                            <tr>
                                 <td>
-                                    <b>Asset account (civil works)</b>
-                                    <span class="asterik"> *</span>
+                                    <b>PV No</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='invoice_date' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("date_received")); ?>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> 
+                                    <b>Reference of approved memo</b>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='asset_account' placeholder="160001">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("asset_account")); ?>
+                                        <?php print(form_error("stage")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
+                            </tr>  
+
                             <tr>
-                                <td>
-                                    <b>Certificate number</b>
-                                    <span class="asterik"> *</span>
+                                <td> 
+                                    <b>Contract number</b>
+                                    <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='certificate_number' placeholder="">
+                                    <input type='text' name='asset_account' placeholder="160001">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("stage")); ?>
+                                    </div>
+                                </td>
+                            </tr>  
+
+                            <tr>
+                                <td>
+                                    <b>Account (Contractor)</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='account' placeholder="Pull the contractor's info">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
                                         <?php print(form_error("certificate_number")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
-
-                            <tr>
-                                <td>
-                                    <b>Contract number</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='contract_number' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("contract_number")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>
-                                <td>
-                                    <b>Contractor</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='contractor' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("contractor")); ?>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>                     
-                                <td>
-                                    <b>Agency</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='agency' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("agency")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-
+                            </tr>  
+                         
+                                 
                             <tr>
                                 <td>
                                     <b>Location</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <select name='location'>
@@ -244,11 +216,27 @@
                                         <?php print(form_error("location")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
+                            </tr>   
+
+                            <tr>
+                                <td>
+                                    <b>Reference to description of expenses</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='reference_to_service_provided' placeholder="Pull reference to service">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("reference_to_service_provided")); ?>
+                                    </div>
+                                </td>
+                            </tr> 
+
                             <tr>                     
                                 <td>
                                     <b>Transaction currency</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='transaction_currency' placeholder="">
@@ -262,10 +250,10 @@
                             <tr>                     
                                 <td>
                                     <b>Rate to Cedi</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='agency' placeholder="">
+                                    <input type='text' name='rate_to_cedi' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -276,7 +264,7 @@
                             <tr>                     
                                 <td>
                                     <b>Rate to USD</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='rate_to_usd' placeholder="">
@@ -287,33 +275,18 @@
                                     </div>
                                 </td>
                             </tr>                            
-
+                                                     
                             <tr>                     
                                 <td>
-                                    <b>Reference to Works Completed (as defined in the contract)</b>
-                                    <span class="asterik"> *</span>
+                                    <b>Invoice total amount</b>
+                                    <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='reference_to_works_conpleted' placeholder="">
+                                    <input type='text' name='invoice_total_amount' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("reference_to_works_conpleted")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-
-                            <tr>                     
-                                <td>
-                                    <b>Gross value of work done (In Txn CCY)</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='gross_value_of_work_done' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("gross_value_of_work_done")); ?>
+                                        <?php print(form_error("invoice_total_amount")); ?>
                                     </div>
                                 </td>
                             </tr>                            
@@ -321,70 +294,29 @@
                                 <td>
                                     <hr/>
                                     <b>Less</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                             </tr>
+
                             <tr>                     
                                 <td>
-                                    <b>+/- Fluctuation in amount payable</b>
-                                    <span class="asterik"> *</span>
+                                    <b>VAT</b>
+                                    <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='fluctuation_in_amount_payable' placeholder="">
+                                    <input type='text' name='vat' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("fluctuation_in_amount_payable")); ?>
+                                        <?php print(form_error("vat")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
-                            <tr>
-                     
-                                <td>
-                                    <b>=/- Liquidation damages</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='liquidaion_damages' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("liquidaion_damages")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Deduction for mobilisation advance</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='deduction_for_mobilisation_advance' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("deduction_for_mobilisation_advance")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Retention</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='retention' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("retention")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
+                            </tr> 
+                           
                             <tr>                     
                                 <td>
                                     <b>Withholding tax</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='withholding_tax' placeholder="">
@@ -395,38 +327,12 @@
                                     </div>
                                 </td>
                             </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Asroc dues</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='asroc_dues' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("asroc_dues")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
-                            <tr>                     
-                                <td>
-                                    <b>Other deductions</b>
-                                    <span class="asterik"> *</span>
-                                </td>
-                                <td>
-                                    <input type='text' name='other_deductions' placeholder="">
-                                </td>
-                                <td class="span3" >
-                                    <div class="error-msg">
-                                        <?php print(form_error("other_deductions")); ?>
-                                    </div>
-                                </td>
-                            </tr>                            
+                      
+
                             <tr>                     
                                 <td>
                                     <b>Net amount payable</b>
-                                    <span class="asterik"> *</span>
+                                    <span> *</span>
                                 </td>
                                 <td>
                                     <input type='text' name='net_amount_payable' placeholder="">
@@ -438,44 +344,72 @@
                                 </td>
                             </tr>                            
                             
-                            <b>Net amount payable</b>
-                            <?php foreach ($funders as $funders_comp): ?>
-                                    <tr>
-                                        <td><b><?php echo $funders_comp['fund_donor']; ?></b></td>
-                                         <td>
-                                        <input type='text' name='amount_payable_to_donors' placeholder="">
-                                        </td>
-                                        <td class="span3" >
-                                            <div class="error-msg">
-                                                <?php print(form_error("amount_payable_to_donors")); ?>
-                                            </div>
-                                        </td>   
-                                      
-                                    </tr>
-                            <?php endforeach ?>
-
+                            
                             <tr>                     
                                 <td>
-
-                                    <b>Make payment directly to: </b>
-                                    <span> *</span>
-
                                     <b>Amount payable by donors</b>
-                                    <span class="asterik"> *</span>
-
+                                    <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='make_direct_payment_to' placeholder="">
+                                    <input type='text' name='net_amount_payable' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
-                                        <?php print(form_error("make_direct_payment_to")); ?>
+                                        <?php print(form_error("net_amount_payable")); ?>
                                     </div>
                                 </td>
-                            </tr>                            
+                            </tr> 
+
                             <tr>                     
                                 <td>
+                                    <b>Amount payable by Govt sourcess</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='net_amount_payable' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("net_amount_payable")); ?>
+                                    </div>
+                                </td>
+                            </tr> 
 
+
+                            <tr>                     
+                                <td>
+                                    <b>GoG staff involved</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='net_amount_payable' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("net_amount_payable")); ?>
+                                    </div>
+                                </td>
+                            </tr> 
+
+                             <tr>                     
+                                <td>
+                                    <b>Beneficiary</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='net_amount_payable' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("net_amount_payable")); ?>
+                                    </div>
+                                </td>
+                            </tr> 
+
+
+                                                      
+                            <tr>                     
+                                <td>
                                     <b>Payment method</b>
                                     <span> *</span>
                                 </td>
@@ -493,16 +427,61 @@
                                     </div>
                                 </td>
                             </tr>                            
-                 
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <!-- <button class="btn btn-success" id="submit_button">&nbsp;<i class="icon-arrow-right icon-white"></i></button> -->
+                                    <a href="#myModal" role="button" id="submit_create_button" class="btn btn-success" data-toggle="modal">Next <i class="icon-arrow-right icon-white"></i></a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Confirm Information Provided</h3>
+                        </div>
+                        <div class="modal-body">
 
-                    <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <button class="btn btn-primary">Submit</button>
-              </div>
-                    
+                         <tr>                     
+                                <td>
+                                    <b>Withholding tax</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='withholding_tax' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("withholding_tax")); ?>
+                                    </div>
+                                </td>
+                            </tr>                            
+                            <tr>                     
+                                <td>
+                                    <b>Asroc dues</b>
+                                    <span> *</span>
+                                </td>
+                                <td>
+                                    <input type='text' name='asroc_dues' placeholder="">
+                                </td>
+                                <td class="span3" >
+                                    <div class="error-msg">
+                                        <?php print(form_error("asroc_dues")); ?>
+                                    </div>
+                                </td>
+                            </tr>                            
+                             
+                                
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
             </form>
         </div>
     </div>
