@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-//$config['base_url']	= 'http://50.19.57.178/';
-$config['base_url']	= 'http://localhost/PROFUND/';
+$config['base_url']	= 'http://profund.gopagoda.com/';
+//$config['base_url']	= 'http://localhost/PROFUND/';
 /*
 |--------------------------------------------------------------------------
 | Index File
