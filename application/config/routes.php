@@ -127,18 +127,21 @@ $route['create_bank_charges'] = 'bank_charges/create_bank_charges';
 $route['bank_charge'] = 'bank_charges/bank_charge';
 
 $route['create_cash_transfer'] = 'cash_transfer/create_cash_transfer';
-$route['cash_transfer'] = 'bank_charges/bank_charge';
+$route['cash_transfers'] = 'cash_transfer/cash_transfers';
 
-$route['validate_contract_pay_inst_bank'] = 'payment_instruction_to_bank/validate_contract_code';
-$route['validate_cont_pay_inst_bank']       = 'payment_instruction_to_bank/validate_contract';
-$route['create_payment_advice_from_donor']            = 'payment_advice_from_donor/new_transaction';
+$route['validate_contract_code_pay_inst_bank'] = 'payment_instruction_to_bank/validate_contract_code_pay_inst_bank';
+$route['validate_contract_pay_inst_bank']       = 'payment_instruction_to_bank/validate_contract_pay_inst_bank';
+$route['create_payment_instruction_to_bank']            = 'payment_instruction_to_bank/create_payment_instruction_to_bank';
+$route['new_transaction_pay_inst_bank']            = 'payment_instruction_to_bank/new_transaction_pay_inst_bank';
 
 
-$route['validate_contract_code_ad_don'] = 'payment_advice_from_donor/validate_contract_code';
-$route['validate_contract_ad_don']       = 'payment_advice_from_donor/validate_contract';
-$route['create_payment_advice_from_donor']            = 'payment_advice_from_donor/new_transaction';
+$route['validate_contract_code_ad_don'] = 'payment_advice_from_donor/validate_contract_code_ad_don';
+$route['validate_contract_ad_don']       = 'payment_advice_from_donor/validate_contract_ad_don';
+$route['create_payment_advice_from_donor']            = 'payment_advice_from_donor/create_payment_advice_from_donor';
+$route['new_transaction_ad_don']            = 'payment_advice_from_donor/new_transaction_ad_don';
 
 $route['create_payment_advice_to_replenish_special_account'] = 'payment_advice_to_replenish_special_account/create_payment_advice_to_replenish_special_account';
+$route['payment_advice_to_replenish_special_accounts'] = 'payment_advice_to_replenish_special_account/payment_advice_to_replenish_special_accounts';
 
 //Reports
 $route['validate_report_form'] = 'contractors_ledger/validate_report_form';

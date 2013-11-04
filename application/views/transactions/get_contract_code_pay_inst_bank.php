@@ -15,7 +15,7 @@
                 </ul>
             </div>
 
-			<?php echo form_open('validate_cont_pay_inst_bank'); ?>
+			<?php echo form_open('validate_contract_pay_inst_bank'); ?>
 				<div><input name="contract_code"></div>
 				<div><input type="submit" value="Create payment request for this contract"></div>
 			</form>

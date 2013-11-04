@@ -36,17 +36,17 @@ and open the template in the editor.
 
             <div class="header-main">
                 <div class="header-top container">
-                   <!-- <div class="span6">
+                   <!--  <div class="span6">
                         <a href="/">
                             <img src="<?php echo base_url('public/img/logo_mrt.png'); ?>" style="margin-top: -20px;" title="Profund" alt="Profund">
                         </a>
-                    </div>-->
+                    </div> -->
                     <div class="span6">
-                       <!-- <p>
+                       <p>
                             <img src="<?php echo base_url('public/img/coa.png'); ?>" style="max-width:50px; max-height:50px;" title="Profund" alt="Profund">
                             Ministry of Roads and Highways.
  
-                        </p> -->
+                        </p> 
 
 
                          </div>
@@ -56,8 +56,7 @@ and open the template in the editor.
                     <div class="clearer"></div>
                 </div>
             </div>
-            <!--
->>>>>>> 64a1a67cdf3ef694fad88386b38c5001e7103dfd -->
+       
             
             <div class="navbar navbar-fixed">  
                 <div class="navbar-inner" style="border-radius: 0px !important;">                       
@@ -85,7 +84,7 @@ and open the template in the editor.
                                     <li><a href="<?php echo base_url();?>index.php/validate_contract_code_ad_don">Payment advice from donor</a></li>
                                     <li><a href="<?php echo base_url();?>index.php/create_payment_advice_to_replenish_special_account">Payment advice to replenish special account</a></li>
                                     
-                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_pay_inst_bank">Payment instruction to bank</a></li>
+                                    <li><a href="<?php echo base_url();?>index.php/validate_contract_code_pay_inst_bank">Payment instruction to bank</a></li>
            
 
                                 </ul>  

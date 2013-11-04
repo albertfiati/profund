@@ -243,22 +243,7 @@
                                             {{proc_type}}
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <b>Status</b>
-                                        </td>
-                                        <td>
-                                            {{status}}                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <b>Date of no objection</b>
-                                        </td>
-                                        <td>
-                                            {{date_of_no_objection}}
-                                        </td>
-                                    </tr>  
+                                   
                                 </tbody>
                             </table> 
                         </div>

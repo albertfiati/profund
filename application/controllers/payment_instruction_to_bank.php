@@ -9,6 +9,7 @@ class Payment_instruction_to_bank extends CI_Controller {
         $this->load->model('sub_components_model');
         $this->load->model('components_model');
         $this->load->model('programs_model');
+        $this->load->model('payment_instruction_to_bank_model');
         $this->load->library('session');
     }
 
@@ -18,7 +19,7 @@ class Payment_instruction_to_bank extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
 
             $data['username'] = $session_data['username'];
-            $data['title'] = 'Payment_certificate';
+            $data['title'] = 'Payment instruction to bank';
 
             $this->validate_contract_code_req();
 
@@ -28,7 +29,7 @@ class Payment_instruction_to_bank extends CI_Controller {
         }
         }
 
-    public function validate_contract_code() {
+    public function validate_contract_code_pay_inst_bank() {
 
         if($this->session->userdata('logged_in'))
       {
@@ -55,7 +56,7 @@ class Payment_instruction_to_bank extends CI_Controller {
 
 
 
-    public function validate_contract() {
+    public function validate_contract_pay_inst_bank() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
 
         $contract_code = $_REQUEST[ 'contract_code' ];
@@ -87,13 +88,13 @@ class Payment_instruction_to_bank extends CI_Controller {
 
         if ( count( $contract ) > 0 ) {
             // yup, found some contract
-            redirect('create_payment_advice_from_donor');
+            redirect('new_transaction_pay_inst_bank');
         } else {
-            $this->validate_contract_code();
+            $this->validate_contract_code_pay_inst_bank();
         }
     }
 
-    public function new_transaction() {
+    public function new_transaction_pay_inst_bank() {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 //        $data['success_message'] = $session_data['success_message'];
@@ -115,11 +116,11 @@ class Payment_instruction_to_bank extends CI_Controller {
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/create_payment_advice_from_donor', $data );
+            $this->load->view('transactions/create_payment_instruction_to_bank', $data );
             $this->load->view('includes/footer');
         } else {
             $this->load->view('includes/header', $data);
-            $this->load->view('transactions/create_payment_advice_from_donor', $data);
+            $this->load->view('transactions/create_payment_instruction_to_bank', $data);
 
             $data['title'] = 'Create payment request';
 
@@ -127,36 +128,32 @@ class Payment_instruction_to_bank extends CI_Controller {
         }
     }
 
-    public function create_payment_advice_from_donor(){
+    public function create_payment_instruction_to_bank(){
 
-      if($this->session->userdata('logged_in'))
-      {
- 
-        $session_data = $this->session->userdata('logged_in');
-       // $data = $this->payment_request_model->set_payment_request();
+         if($this->session->userdata('logged_in'))
+              {
+         
+                $session_data = $this->session->userdata('logged_in');
+                $data['username'] = $session_data['username'];
+                $data['title'] = 'Payment instruction to bank';
 
-        $agency = '';
+                $form_data = $this->payment_instruction_to_bank_model->set_payment_instruction_to_bank();
 
-        $data['username'] = $session_data['username'];
-        $data['title'] = 'payment_certificate';
+                $data['msg'] = 'Payment instruction to bank successfully created!';
 
-       
+                $this->load->view('includes/header', $data);
+                $this->load->view('transactions/success', $data );
 
-        
+                $this->load->view('includes/footer');
+                
 
-        
-        //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
+           
+               
 
-
-            $this->load->view('includes/header', $data);
-            //$this->load->view('transactions/donor_funds_pc', $data);
-            $this->load->view('includes/footer');
-
-     } else {
-            //If no session, redirect to login page
-            redirect('login', 'refresh');
-        }
-    }
-
+             } else {
+                    //If no session, redirect to login page
+                    redirect('login', 'refresh');
+                }
+}
   
 }                                  

@@ -31,6 +31,29 @@ class Cash_transfer extends CI_Controller {
         }
 
 
+    public function cash_transfers(){
+
+   
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create cash transfer';
+
+            $feed = $this->cash_transfer_model->set_cash_transfer();
+
+            $data['msg'] = 'Cash transfer successfully created!';
+
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/success', $data );
+            $this->load->view('includes/footer');
+
+
+
+  }
+
 
 
 
@@ -46,7 +69,7 @@ class Cash_transfer extends CI_Controller {
             $this->load->helper('form');
             $this->load->library('form_validation');
             
-            $data['title'] = 'Valideate contract code';
+            $data['title'] = 'Create cash transfer';
             
 
             $this->load->view('includes/header', $data);
