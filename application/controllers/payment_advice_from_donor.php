@@ -9,6 +9,7 @@ class Payment_advice_from_donor extends CI_Controller {
         $this->load->model('sub_components_model');
         $this->load->model('components_model');
         $this->load->model('programs_model');
+        $this->load->model('payment_advice_from_donor_model');
         $this->load->library('session');
     }
 
@@ -28,7 +29,7 @@ class Payment_advice_from_donor extends CI_Controller {
         }
         }
 
-    public function validate_contract_code() {
+    public function validate_contract_code_ad_don() {
 
         if($this->session->userdata('logged_in'))
       {
@@ -55,7 +56,7 @@ class Payment_advice_from_donor extends CI_Controller {
 
 
 
-    public function validate_contract() {
+    public function validate_contract_ad_don() {
 //        $this->load->view('transactions/create_payment_certificate', $_REQUEST);
 
         $contract_code = $_REQUEST[ 'contract_code' ];
@@ -87,13 +88,13 @@ class Payment_advice_from_donor extends CI_Controller {
 
         if ( count( $contract ) > 0 ) {
             // yup, found some contract
-            redirect('create_payment_advice_from_donor');
+            redirect('new_transaction_ad_don');
         } else {
             $this->validate_contract_code();
         }
     }
 
-    public function new_transaction() {
+    public function new_transaction_ad_don() {
         $session_data = $this->session->userdata('logged_in');
         $data['username'] = $session_data['username'];
 //        $data['success_message'] = $session_data['success_message'];
@@ -101,7 +102,7 @@ class Payment_advice_from_donor extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        $data['title'] = 'Create payment request';
+        $data['title'] = 'Create payment advice from donor';
         $this->form_validation->set_error_delimiters('<div style="width:470px; margin:20px;" class="alert alert-error">', '</div>');
 
         $data['username'] = $session_data['username'];
@@ -121,7 +122,7 @@ class Payment_advice_from_donor extends CI_Controller {
             $this->load->view('includes/header', $data);
             $this->load->view('transactions/create_payment_advice_from_donor', $data);
 
-            $data['title'] = 'Create payment request';
+            $data['title'] = 'Create payment advice from donor';
 
             $this->load->view('includes/footer');
         }
@@ -129,28 +130,28 @@ class Payment_advice_from_donor extends CI_Controller {
 
     public function create_payment_advice_from_donor(){
 
-      if($this->session->userdata('logged_in'))
+    if($this->session->userdata('logged_in'))
       {
  
         $session_data = $this->session->userdata('logged_in');
-       // $data = $this->payment_request_model->set_payment_request();
-
-        $agency = '';
-
         $data['username'] = $session_data['username'];
-        $data['title'] = 'payment_certificate';
+        $data['title'] = 'Create payment advice from donor';
 
+        $form_data = $this->payment_advice_from_donor_model->set_payment_advice_from_donor();
+
+        
+
+        $data['msg'] = 'Payment advice from donor successfully created!';
+
+        $this->load->view('includes/header', $data);
+        $this->load->view('transactions/success', $data );
+
+        $this->load->view('includes/footer');
+
+        
+
+   
        
-
-        
-
-        
-        //make the deductions from the gross and put the data in db taking debit and credit after asking for edit.
-
-
-            $this->load->view('includes/header', $data);
-            //$this->load->view('transactions/donor_funds_pc', $data);
-            $this->load->view('includes/footer');
 
      } else {
             //If no session, redirect to login page

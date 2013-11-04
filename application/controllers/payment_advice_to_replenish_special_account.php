@@ -9,6 +9,7 @@ class Payment_advice_to_replenish_special_account extends CI_Controller {
         $this->load->model('sub_components_model');
         $this->load->model('components_model');
         $this->load->model('programs_model');
+        $this->load->model('payment_advice_to_replenish_special_account_model');
         $this->load->library('session');
     }
 
@@ -31,6 +32,30 @@ class Payment_advice_to_replenish_special_account extends CI_Controller {
         }
 
 
+
+public function payment_advice_to_replenish_special_accounts(){
+
+   
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+
+        
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create payment advice to replenish special account';
+
+            $feed = $this->payment_advice_to_replenish_special_account_model->set_payment_advice_to_replenish_special_account();
+
+            $data['msg'] = 'Payment advice to replenish special account successfully created!';
+
+            $this->load->view('includes/header', $data);
+            $this->load->view('transactions/success', $data );
+            $this->load->view('includes/footer');
+
+  }
+
+
+ 
 
 
 

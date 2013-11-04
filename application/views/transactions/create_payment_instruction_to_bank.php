@@ -23,7 +23,7 @@
         <div class="span8 pull-right" id="user_menu" style="margin-left: 200px;">
 
 
-            <?php echo form_open('set_cash_transfer') ?>
+            <?php echo form_open('create_payment_instruction_to_bank') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>
@@ -39,7 +39,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_received' placeholder="">
+                                    <input type='text' name='date_paid' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -50,11 +50,11 @@
 
                             <tr>
                                 <td>
-                                    <b>Pay instruction number</b>
+                                    <b>Payment instruction number</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_date' placeholder="">
+                                    <input type='text' name='payment_instruction_number' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -69,15 +69,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='payment_source' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -92,15 +84,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='location'>
-                                        
-                                        <option value=''>--Select transfer type--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='application_number' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -115,15 +99,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='location'>
-                                        
-                                        <option value=''>--Select transfer type--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='designated_account' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -157,7 +133,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='agency' placeholder="">
+                                    <input type='text' name='rate_to_cedi' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -186,7 +162,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='amount_paid' placeholder="">
                                 </td> 
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -201,7 +177,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='payment_bank_name' placeholder="">
                                 </td> 
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -216,7 +192,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='payment_instruction' placeholder="">
                                 </td> 
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -231,7 +207,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='contractor_account' placeholder="">
                                 </td> 
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -246,7 +222,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='payment_advice_ref' placeholder="">
                                 </td> 
                                 <td class="span3" >
                                     <div class="error-msg">

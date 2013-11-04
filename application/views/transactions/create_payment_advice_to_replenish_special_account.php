@@ -23,7 +23,7 @@
         <div class="span8 pull-right" id="user_menu" style="margin-left: 200px;">
 
 
-            <?php echo form_open('set_cash_transfer') ?>
+            <?php echo form_open('payment_advice_to_replenish_special_accounts') ?>
                 <div class="form-padding">
                     <table id="req_form">
                         <tbody>
@@ -39,7 +39,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='date_received' placeholder="">
+                                    <input type='text' name='date_paid' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -69,15 +69,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='donor_account_name'>
-                                        
-                                        <option value=''>--Pull data from db--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='transaction_type' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -92,15 +84,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='location'>
-                                        
-                                        <option value=''>--Select transfer type--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='application_number' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -111,19 +95,11 @@
 
                             <tr>
                                 <td>
-                                    <b>Donor Account Code</b>
+                                    <b>Donor Account</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='location'>
-                                        
-                                        <option value=''>--Select transfer type--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='donor_account' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -138,15 +114,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <select name='location'>
-                                        
-                                        <option value=''>--Select transfer type--</option>
-                                        <option value='ashanti'>From Donor to Designated Account</option>
-                                        <option value='greater_accra'>From Designated to Donor Account</option>
-                                        <option value='greater_accra'>From Designated to Project Account</option>
-                                        <option value='greater_accra'>From Project to Donor Account</option>
-             
-                                    </select>
+                                    <input type='text' name='special_account' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -178,7 +146,7 @@
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='agency' placeholder="">
+                                    <input type='text' name='rate_to_cedi' placeholder="">
                                 </td>
                                 <td class="span3" >
                                     <div class="error-msg">
@@ -203,11 +171,11 @@
                                                      
                             <tr>                     
                                 <td>
-                                    <b>Transfered Amount (In transaction currency)</b>
+                                    <b>Transferred Amount (In transaction currency)</b>
                                     <span> *</span>
                                 </td>
                                 <td>
-                                    <input type='text' name='invoice_total_amount' placeholder="">
+                                    <input type='text' name='transferred_amount ' placeholder="">
                                 </td> 
                                 <td class="span3" >
                                     <div class="error-msg">
